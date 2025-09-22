@@ -1,0 +1,31 @@
+# AutoML Leaderboard
+
+| Best model   | name                                                         | model_type     | metric_type   |   metric_value |   train_time |
+|:-------------|:-------------------------------------------------------------|:---------------|:--------------|---------------:|-------------:|
+|              | [1_Baseline](1_Baseline/README.md)                           | Baseline       | rmse          |        1476.26 |         0.87 |
+|              | [2_DecisionTree](2_DecisionTree/README.md)                   | Decision Tree  | rmse          |        1555.86 |        12.93 |
+|              | [3_Linear](3_Linear/README.md)                               | Linear         | rmse          |        1513.11 |         4.19 |
+|              | [4_Default_Xgboost](4_Default_Xgboost/README.md)             | Xgboost        | rmse          |        1478.35 |         4.68 |
+|              | [5_Default_NeuralNetwork](5_Default_NeuralNetwork/README.md) | Neural Network | rmse          |        1515.92 |         1.8  |
+|              | [6_Default_RandomForest](6_Default_RandomForest/README.md)   | Random Forest  | rmse          |        1479.14 |         6.82 |
+| **the best** | [Ensemble](Ensemble/README.md)                               | Ensemble       | rmse          |        1473.76 |         0.34 |
+
+### AutoML Performance
+![AutoML Performance](ldb_performance.png)
+
+### AutoML Performance Boxplot
+![AutoML Performance Boxplot](ldb_performance_boxplot.png)
+
+### Features Importance (Original Scale)
+![features importance across models](features_heatmap.png)
+
+
+
+### Scaled Features Importance (MinMax per Model)
+![scaled features importance across models](features_heatmap_scaled.png)
+
+
+
+### Spearman Correlation of Models
+![models spearman correlation](correlation_heatmap.png)
+

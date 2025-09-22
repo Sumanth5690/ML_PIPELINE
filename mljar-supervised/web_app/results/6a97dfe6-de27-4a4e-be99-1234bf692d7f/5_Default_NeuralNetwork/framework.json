@@ -1,0 +1,173 @@
+{
+    "uid": "041be386-6cad-4bfe-8832-783f6392963d",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        8.697517466103402,
+                        2.796081538732438,
+                        149.11446137934786,
+                        30.188181721620047,
+                        148.21100630746088
+                    ],
+                    "mean": [
+                        29.828435294684247,
+                        5.219698461223938,
+                        1030.1261648283019,
+                        206.03930315705264,
+                        1030.8470181113223
+                    ],
+                    "var": [
+                        75.64681007317374,
+                        7.818071971240357,
+                        22235.122592453023,
+                        911.3263156575547,
+                        21966.502390670204
+                    ],
+                    "n_samples_seen": 750,
+                    "n_features_in": 5,
+                    "columns": [
+                        "temperature",
+                        "wind_speed",
+                        "irradiation",
+                        "pv_power",
+                        "predicted_irradiation"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.9248225763154745
+                ],
+                "mean": [
+                    3.426968993707725
+                ],
+                "var": [
+                    0.8552967976627917
+                ],
+                "n_samples_seen": 750,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    10.257461088342296
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "temperature": [
+                        "scale_normal"
+                    ],
+                    "wind_speed": [
+                        "scale_normal"
+                    ],
+                    "irradiation": [
+                        "scale_normal"
+                    ],
+                    "pv_power": [
+                        "scale_normal"
+                    ],
+                    "predicted_irradiation": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "faed9b73-08e3-48d9-8008-3975f2ef1f83",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "temperature": [
+                    "scale_normal"
+                ],
+                "wind_speed": [
+                    "scale_normal"
+                ],
+                "irradiation": [
+                    "scale_normal"
+                ],
+                "pv_power": [
+                    "scale_normal"
+                ],
+                "predicted_irradiation": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\6a97dfe6-de27-4a4e-be99-1234bf692d7f\\X.data",
+            "y_path": "results\\6a97dfe6-de27-4a4e-be99-1234bf692d7f\\y.data",
+            "results_path": "results\\6a97dfe6-de27-4a4e-be99-1234bf692d7f"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "4.09411680096242",
+    "train_time": 0.6940805912017822,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

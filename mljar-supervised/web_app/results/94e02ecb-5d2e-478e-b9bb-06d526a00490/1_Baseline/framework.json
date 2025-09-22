@@ -1,0 +1,79 @@
+{
+    "uid": "0ccd71bc-4f80-4a90-a3ec-ddf2908321fb",
+    "name": "1_Baseline",
+    "preprocessing": [
+        {
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Baseline Regressor",
+            "algorithm_short_name": "Baseline",
+            "uid": "9433a2c5-3d3a-4d70-94b9-d22c839dd75f",
+            "params": {
+                "model_type": "Baseline",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\94e02ecb-5d2e-478e-b9bb-06d526a00490\\X.data",
+            "y_path": "results\\94e02ecb-5d2e-478e-b9bb-06d526a00490\\y.data",
+            "results_path": "results\\94e02ecb-5d2e-478e-b9bb-06d526a00490"
+        },
+        "learner": {
+            "model_type": "Baseline",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "1_Baseline",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "1_Baseline\\learner_fold_0.baseline"
+    ],
+    "predictions_fname": "1_Baseline\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "50483.55482839976",
+    "train_time": 11.369900226593018,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

@@ -1,0 +1,175 @@
+{
+    "uid": "1b559ad2-2f62-4fd4-98ed-6365ac5ee981",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "Windy": {
+                            "False": 0,
+                            "True": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Temperature",
+                        "Windy",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        0.4714045207910317,
+                        0.49987652796453313,
+                        0.49690399499995336
+                    ],
+                    "mean": [
+                        0.6666666666666666,
+                        0.5111111111111111,
+                        0.4444444444444444
+                    ],
+                    "var": [
+                        0.2222222222222222,
+                        0.24987654320987665,
+                        0.24691358024691365
+                    ],
+                    "n_samples_seen": 45,
+                    "n_features_in": 3,
+                    "columns": [
+                        "Temperature",
+                        "Windy",
+                        "PlayTennis"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "Overcast": 0,
+                "Rain": 1,
+                "Sunny": 2
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Temperature": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "Windy": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "a5835e1f-d49b-4329-a819-3c7d051af2cb",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "num_class": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Temperature": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Humidity": [
+                    "remove_column"
+                ],
+                "Windy": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "PlayTennis": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\4e89b849-5124-4f81-960e-a053ea5dd34d\\X.data",
+            "y_path": "results\\4e89b849-5124-4f81-960e-a053ea5dd34d\\y.data",
+            "results_path": "results\\4e89b849-5124-4f81-960e-a053ea5dd34d"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "num_class": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.07856382850833633",
+    "train_time": 10.136512994766235,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

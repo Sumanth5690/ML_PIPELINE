@@ -1,0 +1,34 @@
+{
+    "columns": [
+        "Temperature",
+        "Humidity",
+        "Windy",
+        "PlayTennis"
+    ],
+    "rows": 7,
+    "cols": 4,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Temperature": [
+            "categorical",
+            "few_categories"
+        ],
+        "Humidity": [
+            "constant_column"
+        ],
+        "Windy": [
+            "categorical",
+            "few_categories"
+        ],
+        "PlayTennis": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [],
+    "n_features": 4,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false,
+    "n_classes": 3,
+    "num_class": 3
+}

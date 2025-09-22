@@ -1,0 +1,16 @@
+if (date_2194 <= 0.846) and (date_2180 <= 0.751) and (date_27 <= 0.761) then response: 19.993 | based on 73,618 samples
+
+if (date_2194 <= 0.846) and (date_2180 <= 0.751) and (date_27 > 0.761) then response: 20.36 | based on 1,243 samples
+
+if (date_2194 <= 0.846) and (date_2180 > 0.751) and (school_absenteeism <= 23.395) then response: 20.577 | based on 104 samples
+
+if (date_2194 <= 0.846) and (date_2180 > 0.751) and (school_absenteeism > 23.395) then response: 23.542 | based on 24 samples
+
+if (date_2194 > 0.846) and (school_absenteeism <= 11.915) and (poverty_rate > 8.415) then response: 21.0 | based on 7 samples
+
+if (date_2194 > 0.846) and (school_absenteeism <= 11.915) and (poverty_rate <= 8.415) then response: 27.0 | based on 2 samples
+
+if (date_2194 > 0.846) and (school_absenteeism > 11.915) and (school_absenteeism > 20.78) then response: 32.0 | based on 1 samples
+
+if (date_2194 > 0.846) and (school_absenteeism > 11.915) and (school_absenteeism <= 20.78) then response: 30.0 | based on 1 samples
+

@@ -1,0 +1,443 @@
+{
+    "uid": "8a8b6173-a054-4ee4-9f75-e924bfeacda0",
+    "name": "7_Xgboost",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "a24a4efb-206d-454c-be2b-43d3edacd1cb",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "9dde52f6-e414-408f-85f3-d20c4fa63d90",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "da7541e0-36a0-4631-921e-9c204c937965",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "fc37c847-7ffc-4296-848e-4a31993d975d",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "87a5b64b-7d61-4287-a6e9-1faccb0beb29",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 8,
+                "min_child_weight": 5,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Outlook": [
+                    "categorical_to_int"
+                ],
+                "Temperature": [
+                    "categorical_to_int"
+                ],
+                "Humidity": [
+                    "remove_column"
+                ],
+                "PlayTennis": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\42ee5dfa-3be3-4c90-8069-2e1c557a77e2\\X.data",
+            "y_path": "results\\42ee5dfa-3be3-4c90-8069-2e1c557a77e2\\y.data",
+            "results_path": "results\\42ee5dfa-3be3-4c90-8069-2e1c557a77e2"
+        },
+        "learner": {
+            "model_type": "Xgboost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "objective": "binary:logistic",
+            "eta": 0.075,
+            "max_depth": 8,
+            "min_child_weight": 5,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "eval_metric": "logloss",
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "7_Xgboost",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "7_Xgboost\\learner_fold_0.xgboost.json",
+        "7_Xgboost\\learner_fold_1.xgboost.json",
+        "7_Xgboost\\learner_fold_2.xgboost.json",
+        "7_Xgboost\\learner_fold_3.xgboost.json",
+        "7_Xgboost\\learner_fold_4.xgboost.json"
+    ],
+    "predictions_fname": "7_Xgboost\\predictions_out_of_folds.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.6931471805599453",
+    "train_time": 2.7832584381103516,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.45,
+    "single_prediction_time": 0.027434110641479492
+}

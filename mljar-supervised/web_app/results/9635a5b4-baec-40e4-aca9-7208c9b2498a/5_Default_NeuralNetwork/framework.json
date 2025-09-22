@@ -1,0 +1,236 @@
+{
+    "uid": "d0c8317d-669d-4a35-bb23-3fa7f9ade4ce",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Sl. No.": {
+                            "1": 0,
+                            "10": 1,
+                            "11": 2,
+                            "12": 3,
+                            "13": 4,
+                            "16": 5,
+                            "17": 6,
+                            "19": 7,
+                            "20": 8,
+                            "23": 9,
+                            "24": 10,
+                            "25": 11,
+                            "26": 12,
+                            "27": 13,
+                            "28": 14,
+                            "29": 15,
+                            "3": 16,
+                            "31": 17,
+                            "32": 18,
+                            "33": 19,
+                            "34": 20,
+                            "35": 21,
+                            "36": 22,
+                            "4": 23,
+                            "6": 24,
+                            "7": 25,
+                            "8": 26
+                        },
+                        "State/UTs": {
+                            "Andhra Pradesh": 0,
+                            "Assam": 1,
+                            "Bihar": 2,
+                            "Chandigarh": 3,
+                            "Dadra and Nagar Haveli and Daman and Diu": 4,
+                            "Delhi": 5,
+                            "Goa": 6,
+                            "Gujarat": 7,
+                            "Himachal Pradesh": 8,
+                            "Jammu and Kashmir": 9,
+                            "Jharkhand": 10,
+                            "Karnataka": 11,
+                            "Kerala": 12,
+                            "Ladakh": 13,
+                            "Lakshadweep": 14,
+                            "Manipur": 15,
+                            "Meghalaya": 16,
+                            "Nagaland": 17,
+                            "Odisha": 18,
+                            "Puducherry": 19,
+                            "Sikkim": 20,
+                            "Tamil Nadu": 21,
+                            "Telangana": 22,
+                            "Tripura": 23,
+                            "Uttar Pradesh": 24,
+                            "Uttarakhand": 25,
+                            "West Bengal": 26
+                        }
+                    },
+                    "columns": [
+                        "Sl. No.",
+                        "State/UTs"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        7.788880963698615,
+                        7.788880963698615,
+                        3.5046158079868355,
+                        3.409898445321709
+                    ],
+                    "mean": [
+                        13.0,
+                        13.0,
+                        6.862962962962962,
+                        6.9
+                    ],
+                    "var": [
+                        60.666666666666664,
+                        60.666666666666664,
+                        12.282331961591218,
+                        11.627407407407409
+                    ],
+                    "n_samples_seen": 27,
+                    "n_features_in": 4,
+                    "columns": [
+                        "Sl. No.",
+                        "State/UTs",
+                        "2022-23",
+                        "2023-24"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.6738764706796108
+                ],
+                "mean": [
+                    1.6350349800975719
+                ],
+                "var": [
+                    0.45410949773560827
+                ],
+                "n_samples_seen": 27,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    2.8
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "Sl. No.": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "State/UTs": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "2022-23": [
+                        "scale_normal"
+                    ],
+                    "2023-24": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "69f1c565-0960-4363-9cff-a4be2f8033ac",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Sl. No.": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "State/UTs": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "2022-23": [
+                    "scale_normal"
+                ],
+                "2023-24": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\9635a5b4-baec-40e4-aca9-7208c9b2498a\\X.data",
+            "y_path": "results\\9635a5b4-baec-40e4-aca9-7208c9b2498a\\y.data",
+            "results_path": "results\\9635a5b4-baec-40e4-aca9-7208c9b2498a"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "2.8340183948307875",
+    "train_time": 0.6226966381072998,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

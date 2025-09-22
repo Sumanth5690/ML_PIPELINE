@@ -1,0 +1,163 @@
+{
+    "uid": "97823662-5a99-4847-9a89-1818e0e99c17",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        8.688511509394973,
+                        24.155979328798352,
+                        5.2981523604107705,
+                        4.506561727970006
+                    ],
+                    "mean": [
+                        29.605866666666667,
+                        60.654,
+                        20.572877333333334,
+                        77.84450600000001
+                    ],
+                    "var": [
+                        75.4902322488889,
+                        583.5113373333334,
+                        28.07041843412622,
+                        20.309098608004003
+                    ],
+                    "n_samples_seen": 750,
+                    "n_features_in": 4,
+                    "columns": [
+                        "temperature",
+                        "humidity",
+                        "latitude",
+                        "longitude"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.7358190361067808
+                ],
+                "mean": [
+                    2.410385787097309
+                ],
+                "var": [
+                    0.541429653897112
+                ],
+                "n_samples_seen": 750,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    0.0
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "temperature": [
+                        "scale_normal"
+                    ],
+                    "humidity": [
+                        "scale_normal"
+                    ],
+                    "latitude": [
+                        "scale_normal"
+                    ],
+                    "longitude": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "262f90f9-2f6b-45ee-945b-d08e87f83006",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "temperature": [
+                    "scale_normal"
+                ],
+                "humidity": [
+                    "scale_normal"
+                ],
+                "latitude": [
+                    "scale_normal"
+                ],
+                "longitude": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\ab3ad4e6-cdc7-4192-b5b3-d4ec1237d04d\\X.data",
+            "y_path": "results\\ab3ad4e6-cdc7-4192-b5b3-d4ec1237d04d\\y.data",
+            "results_path": "results\\ab3ad4e6-cdc7-4192-b5b3-d4ec1237d04d"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "7.779955758412429",
+    "train_time": 1.9817209243774414,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

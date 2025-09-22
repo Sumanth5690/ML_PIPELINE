@@ -1,0 +1,6 @@
+if (Temperature > 0.5) and (PlayTennis > 0.5) then class: Overcast (proba: 100.0%) | based on 15 samples
+
+if (Temperature > 0.5) and (PlayTennis <= 0.5) then class: Sunny (proba: 100.0%) | based on 15 samples
+
+if (Temperature <= 0.5) then class: Rain (proba: 100.0%) | based on 15 samples
+

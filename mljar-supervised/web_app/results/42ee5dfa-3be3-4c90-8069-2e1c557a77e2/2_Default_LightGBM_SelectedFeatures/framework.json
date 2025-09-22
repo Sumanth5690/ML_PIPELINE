@@ -1,0 +1,499 @@
+{
+    "uid": "29724dac-9db2-44d2-897a-bec17a110711",
+    "name": "2_Default_LightGBM_SelectedFeatures",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "PlayTennis",
+                "Outlook"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "random_feature",
+                    "PlayTennis",
+                    "Outlook"
+                ]
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "PlayTennis",
+                "Outlook"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "random_feature",
+                    "PlayTennis",
+                    "Outlook"
+                ]
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "PlayTennis",
+                "Outlook"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "random_feature",
+                    "PlayTennis",
+                    "Outlook"
+                ]
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "PlayTennis",
+                "Outlook"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "random_feature",
+                    "PlayTennis",
+                    "Outlook"
+                ]
+            }
+        },
+        {
+            "remove_columns": [
+                "Humidity"
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Outlook": {
+                            "Overcast": 0,
+                            "Rain": 1,
+                            "Sunny": 2
+                        },
+                        "Temperature": {
+                            "Cold": 0,
+                            "Hot": 1
+                        },
+                        "PlayTennis": {
+                            "No": 0,
+                            "Yes": 1
+                        }
+                    },
+                    "columns": [
+                        "Outlook",
+                        "Temperature",
+                        "PlayTennis"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "PlayTennis",
+                "Outlook"
+            ],
+            "params": {
+                "columns_preprocessing": {
+                    "Outlook": [
+                        "categorical_to_int"
+                    ],
+                    "Temperature": [
+                        "categorical_to_int"
+                    ],
+                    "Humidity": [
+                        "remove_column"
+                    ],
+                    "PlayTennis": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "drop_features": [
+                    "random_feature",
+                    "PlayTennis",
+                    "Outlook"
+                ]
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "20093445-576c-4013-807a-09d61483716f",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "6abec0ef-a6a2-4c6e-9cc6-c85898ab4535",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "3277078e-2c3e-4ce1-8987-202ca35b5857",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "438537a3-88e1-4172-8c40-aae8084f278d",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "dd4d2438-7f5c-4f8b-bcb9-f472d70ee9ac",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Outlook": [
+                    "categorical_to_int"
+                ],
+                "Temperature": [
+                    "categorical_to_int"
+                ],
+                "Humidity": [
+                    "remove_column"
+                ],
+                "PlayTennis": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification",
+            "drop_features": [
+                "random_feature",
+                "PlayTennis",
+                "Outlook"
+            ]
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\42ee5dfa-3be3-4c90-8069-2e1c557a77e2\\X.data",
+            "y_path": "results\\42ee5dfa-3be3-4c90-8069-2e1c557a77e2\\y.data",
+            "results_path": "results\\42ee5dfa-3be3-4c90-8069-2e1c557a77e2"
+        },
+        "learner": {
+            "model_type": "LightGBM",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "objective": "binary",
+            "num_leaves": 63,
+            "learning_rate": 0.05,
+            "feature_fraction": 0.9,
+            "bagging_fraction": 0.9,
+            "min_data_in_leaf": 10,
+            "seed": 2,
+            "metric": "binary_logloss",
+            "custom_eval_metric_name": null,
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Default_LightGBM_SelectedFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_features_selection",
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "2_Default_LightGBM_SelectedFeatures\\learner_fold_0.lightgbm",
+        "2_Default_LightGBM_SelectedFeatures\\learner_fold_1.lightgbm",
+        "2_Default_LightGBM_SelectedFeatures\\learner_fold_2.lightgbm",
+        "2_Default_LightGBM_SelectedFeatures\\learner_fold_3.lightgbm",
+        "2_Default_LightGBM_SelectedFeatures\\learner_fold_4.lightgbm"
+    ],
+    "predictions_fname": "2_Default_LightGBM_SelectedFeatures\\predictions_out_of_folds.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.6931471805599453",
+    "train_time": 4.02670693397522,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.45,
+    "single_prediction_time": 0.02422046661376953
+}

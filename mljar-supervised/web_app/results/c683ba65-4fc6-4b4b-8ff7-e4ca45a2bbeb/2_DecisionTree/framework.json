@@ -1,0 +1,85 @@
+{
+    "uid": "2d133eab-1310-42c7-a36f-d070dd1d4239",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "68c1f366-2aac-4d7b-9cda-b741f7bfedaa",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "squared_error",
+                "max_depth": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\c683ba65-4fc6-4b4b-8ff7-e4ca45a2bbeb\\X.data",
+            "y_path": "results\\c683ba65-4fc6-4b4b-8ff7-e4ca45a2bbeb\\y.data",
+            "results_path": "results\\c683ba65-4fc6-4b4b-8ff7-e4ca45a2bbeb"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "squared_error",
+            "max_depth": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_DecisionTree\\learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "50050.961982675275",
+    "train_time": 20.902212142944336,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

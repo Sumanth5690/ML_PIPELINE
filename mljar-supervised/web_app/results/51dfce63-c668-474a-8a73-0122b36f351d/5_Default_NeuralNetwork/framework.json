@@ -1,0 +1,172 @@
+{
+    "uid": "d29b07bd-4256-495c-be43-31e5c5eddc95",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "date"
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        27.245497895167116,
+                        4.291310656515372,
+                        2.0954101670713046,
+                        19.407334237916917
+                    ],
+                    "mean": [
+                        57.61333333333334,
+                        13.269190842942209,
+                        6.077619912341914,
+                        113.09333333333333
+                    ],
+                    "var": [
+                        742.3171555555557,
+                        18.415347150722393,
+                        4.390743768265793,
+                        376.64462222222227
+                    ],
+                    "n_samples_seen": 75,
+                    "n_features_in": 4,
+                    "columns": [
+                        "evictions",
+                        "school_absenteeism",
+                        "poverty_rate",
+                        "er_visits"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.4626138996218073
+                ],
+                "mean": [
+                    1.121159331190583
+                ],
+                "var": [
+                    0.21401162012329564
+                ],
+                "n_samples_seen": 75,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    4.502601884976579
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "date": [
+                        "remove_column"
+                    ],
+                    "evictions": [
+                        "scale_normal"
+                    ],
+                    "school_absenteeism": [
+                        "scale_normal"
+                    ],
+                    "poverty_rate": [
+                        "scale_normal"
+                    ],
+                    "er_visits": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "375ed645-07c4-43c0-9af1-a9c471718d6d",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "date": [
+                    "remove_column"
+                ],
+                "evictions": [
+                    "scale_normal"
+                ],
+                "school_absenteeism": [
+                    "scale_normal"
+                ],
+                "poverty_rate": [
+                    "scale_normal"
+                ],
+                "er_visits": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\51dfce63-c668-474a-8a73-0122b36f351d\\X.data",
+            "y_path": "results\\51dfce63-c668-474a-8a73-0122b36f351d\\y.data",
+            "results_path": "results\\51dfce63-c668-474a-8a73-0122b36f351d"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "1.3646123737588296",
+    "train_time": 0.751075029373169,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

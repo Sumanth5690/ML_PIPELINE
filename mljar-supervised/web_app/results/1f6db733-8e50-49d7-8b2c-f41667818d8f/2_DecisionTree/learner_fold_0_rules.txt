@@ -1,0 +1,16 @@
+if (V10 > -1.659) and (V24 <= 1.119) and (V8 <= 1.903) then response: 981.099 | based on 6,005 samples
+
+if (V10 > -1.659) and (V24 > 1.119) and (V19 > -1.934) then response: 1053.879 | based on 916 samples
+
+if (V10 <= -1.659) and (Time <= 142712.5) and (V15 <= 0.992) then response: 1202.706 | based on 260 samples
+
+if (V10 > -1.659) and (V24 <= 1.119) and (V8 > 1.903) then response: 845.521 | based on 183 samples
+
+if (V10 <= -1.659) and (Time <= 142712.5) and (V15 > 0.992) then response: 901.364 | based on 48 samples
+
+if (V10 <= -1.659) and (Time > 142712.5) and (V2 <= 0.168) then response: 700.334 | based on 42 samples
+
+if (V10 <= -1.659) and (Time > 142712.5) and (V2 > 0.168) then response: 1183.643 | based on 27 samples
+
+if (V10 > -1.659) and (V24 > 1.119) and (V19 <= -1.934) then response: 576.887 | based on 19 samples
+

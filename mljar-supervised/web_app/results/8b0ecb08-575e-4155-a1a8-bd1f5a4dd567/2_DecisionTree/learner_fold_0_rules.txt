@@ -1,0 +1,6 @@
+if (No. of employed persons > 71037.0) and (No. of employed persons > 71167.5) then class: 20074 (proba: 100.0%) | based on 15 samples
+
+if (No. of employed persons > 71037.0) and (No. of employed persons <= 71167.5) then class: 5621 (proba: 100.0%) | based on 15 samples
+
+if (No. of employed persons <= 71037.0) then class: 5394 (proba: 100.0%) | based on 15 samples
+

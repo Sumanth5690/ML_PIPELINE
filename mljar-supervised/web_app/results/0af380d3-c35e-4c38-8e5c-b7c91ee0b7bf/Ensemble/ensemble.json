@@ -1,0 +1,24 @@
+{
+    "name": "Ensemble",
+    "ml_task": "regression",
+    "optimize_metric": "rmse",
+    "selected_models": [
+        {
+            "model": "1_Baseline",
+            "repeat": 1.0
+        },
+        {
+            "model": "2_DecisionTree",
+            "repeat": 3.0
+        },
+        {
+            "model": "6_Default_RandomForest",
+            "repeat": 2.0
+        }
+    ],
+    "predictions_fname": "Ensemble\\predictions_ensemble.csv",
+    "metric_name": "rmse",
+    "final_loss": 4.3339393907366155,
+    "train_time": 0.2736968994140625,
+    "is_stacked": false
+}

@@ -1,0 +1,372 @@
+{
+    "uid": "d17db8e7-5816-40a9-aac0-a1993dfc918a",
+    "name": "3_Default_Xgboost",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "cd95e9ad-723b-4358-9b56-2e2e870690b2",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 6,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "seed": 3,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "72404004-b596-42c8-8793-2d2cc91f6930",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 6,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "seed": 3,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "d9bad991-42e8-4b81-a55d-d16aee22afe2",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 6,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "seed": 3,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "239d4490-d0a0-4cdc-947f-098fddd39499",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 6,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "seed": 3,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "3.0.5",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "4e2aaac9-f811-4d56-8635-c00ba7874900",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 6,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "seed": 3,
+                "eval_metric": "logloss",
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "education": [
+                    "categorical_to_int"
+                ],
+                "city_size": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7\\X.data",
+            "y_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7\\y.data",
+            "results_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7"
+        },
+        "learner": {
+            "model_type": "Xgboost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "objective": "binary:logistic",
+            "eta": 0.075,
+            "max_depth": 6,
+            "min_child_weight": 1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "seed": 3,
+            "eval_metric": "logloss",
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "3_Default_Xgboost",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "3_Default_Xgboost\\learner_fold_0.xgboost.json",
+        "3_Default_Xgboost\\learner_fold_1.xgboost.json",
+        "3_Default_Xgboost\\learner_fold_2.xgboost.json",
+        "3_Default_Xgboost\\learner_fold_3.xgboost.json",
+        "3_Default_Xgboost\\learner_fold_4.xgboost.json"
+    ],
+    "predictions_fname": "3_Default_Xgboost\\predictions_out_of_folds.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.12915965531994403",
+    "train_time": 3.5345332622528076,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.12324096262454987,
+    "single_prediction_time": 0.05589723587036133
+}

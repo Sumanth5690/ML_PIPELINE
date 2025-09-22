@@ -1,0 +1,720 @@
+{
+    "uid": "05a943dc-5dc3-4d77-a086-ac70664409dc",
+    "name": "13_LightGBM_SelectedFeatures",
+    "preprocessing": [
+        {
+            "scale_y": {
+                "scale": [
+                    1.0868624199019397
+                ],
+                "mean": [
+                    11.012202620642437
+                ],
+                "var": [
+                    1.1812699197951002
+                ],
+                "n_samples_seen": 800,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    235.0
+                ]
+            },
+            "ml_task": "regression",
+            "drop_features": [
+                "V25",
+                "V7",
+                "V22",
+                "V20",
+                "V18",
+                "V24",
+                "V9",
+                "V10",
+                "V6",
+                "V5",
+                "V16",
+                "V19",
+                "V28",
+                "V27",
+                "V23",
+                "V26",
+                "V14",
+                "V17",
+                "V8",
+                "Amount",
+                "V12",
+                "V3",
+                "V4",
+                "Class",
+                "V1",
+                "V21",
+                "V2"
+            ],
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression",
+                "drop_features": [
+                    "V25",
+                    "V18_multiply_V15",
+                    "V7",
+                    "V22",
+                    "V20",
+                    "V24_ratio_V28",
+                    "V18",
+                    "V24",
+                    "random_feature",
+                    "V9",
+                    "V10",
+                    "V6",
+                    "V5",
+                    "V16",
+                    "V19",
+                    "V28",
+                    "V27",
+                    "V23",
+                    "V18_sum_V15",
+                    "V26",
+                    "V14",
+                    "V17",
+                    "V8",
+                    "V3_ratio_V21",
+                    "Amount",
+                    "V12",
+                    "V3",
+                    "Class_ratio_V24",
+                    "Class_multiply_V11",
+                    "Class_multiply_V28",
+                    "V11_ratio_Class",
+                    "V28_ratio_Class",
+                    "V4",
+                    "Class",
+                    "V23_sum_V6",
+                    "V1",
+                    "V21",
+                    "V2"
+                ]
+            }
+        },
+        {
+            "scale_y": {
+                "scale": [
+                    1.1412199499535078
+                ],
+                "mean": [
+                    11.010043159587742
+                ],
+                "var": [
+                    1.3023829741718869
+                ],
+                "n_samples_seen": 800,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    846.0
+                ]
+            },
+            "ml_task": "regression",
+            "drop_features": [
+                "V25",
+                "V7",
+                "V22",
+                "V20",
+                "V18",
+                "V24",
+                "V9",
+                "V10",
+                "V6",
+                "V5",
+                "V16",
+                "V19",
+                "V28",
+                "V27",
+                "V23",
+                "V26",
+                "V14",
+                "V17",
+                "V8",
+                "Amount",
+                "V12",
+                "V3",
+                "V4",
+                "Class",
+                "V1",
+                "V21",
+                "V2"
+            ],
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression",
+                "drop_features": [
+                    "V25",
+                    "V18_multiply_V15",
+                    "V7",
+                    "V22",
+                    "V20",
+                    "V24_ratio_V28",
+                    "V18",
+                    "V24",
+                    "random_feature",
+                    "V9",
+                    "V10",
+                    "V6",
+                    "V5",
+                    "V16",
+                    "V19",
+                    "V28",
+                    "V27",
+                    "V23",
+                    "V18_sum_V15",
+                    "V26",
+                    "V14",
+                    "V17",
+                    "V8",
+                    "V3_ratio_V21",
+                    "Amount",
+                    "V12",
+                    "V3",
+                    "Class_ratio_V24",
+                    "Class_multiply_V11",
+                    "Class_multiply_V28",
+                    "V11_ratio_Class",
+                    "V28_ratio_Class",
+                    "V4",
+                    "Class",
+                    "V23_sum_V6",
+                    "V1",
+                    "V21",
+                    "V2"
+                ]
+            }
+        },
+        {
+            "scale_y": {
+                "scale": [
+                    1.1263890795385563
+                ],
+                "mean": [
+                    11.026112921435907
+                ],
+                "var": [
+                    1.2687523585037161
+                ],
+                "n_samples_seen": 800,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    235.0
+                ]
+            },
+            "ml_task": "regression",
+            "drop_features": [
+                "V25",
+                "V7",
+                "V22",
+                "V20",
+                "V18",
+                "V24",
+                "V9",
+                "V10",
+                "V6",
+                "V5",
+                "V16",
+                "V19",
+                "V28",
+                "V27",
+                "V23",
+                "V26",
+                "V14",
+                "V17",
+                "V8",
+                "Amount",
+                "V12",
+                "V3",
+                "V4",
+                "Class",
+                "V1",
+                "V21",
+                "V2"
+            ],
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression",
+                "drop_features": [
+                    "V25",
+                    "V18_multiply_V15",
+                    "V7",
+                    "V22",
+                    "V20",
+                    "V24_ratio_V28",
+                    "V18",
+                    "V24",
+                    "random_feature",
+                    "V9",
+                    "V10",
+                    "V6",
+                    "V5",
+                    "V16",
+                    "V19",
+                    "V28",
+                    "V27",
+                    "V23",
+                    "V18_sum_V15",
+                    "V26",
+                    "V14",
+                    "V17",
+                    "V8",
+                    "V3_ratio_V21",
+                    "Amount",
+                    "V12",
+                    "V3",
+                    "Class_ratio_V24",
+                    "Class_multiply_V11",
+                    "Class_multiply_V28",
+                    "V11_ratio_Class",
+                    "V28_ratio_Class",
+                    "V4",
+                    "Class",
+                    "V23_sum_V6",
+                    "V1",
+                    "V21",
+                    "V2"
+                ]
+            }
+        },
+        {
+            "scale_y": {
+                "scale": [
+                    1.0877073831075406
+                ],
+                "mean": [
+                    11.031980616212277
+                ],
+                "var": [
+                    1.1831073512666541
+                ],
+                "n_samples_seen": 800,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    235.0
+                ]
+            },
+            "ml_task": "regression",
+            "drop_features": [
+                "V25",
+                "V7",
+                "V22",
+                "V20",
+                "V18",
+                "V24",
+                "V9",
+                "V10",
+                "V6",
+                "V5",
+                "V16",
+                "V19",
+                "V28",
+                "V27",
+                "V23",
+                "V26",
+                "V14",
+                "V17",
+                "V8",
+                "Amount",
+                "V12",
+                "V3",
+                "V4",
+                "Class",
+                "V1",
+                "V21",
+                "V2"
+            ],
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression",
+                "drop_features": [
+                    "V25",
+                    "V18_multiply_V15",
+                    "V7",
+                    "V22",
+                    "V20",
+                    "V24_ratio_V28",
+                    "V18",
+                    "V24",
+                    "random_feature",
+                    "V9",
+                    "V10",
+                    "V6",
+                    "V5",
+                    "V16",
+                    "V19",
+                    "V28",
+                    "V27",
+                    "V23",
+                    "V18_sum_V15",
+                    "V26",
+                    "V14",
+                    "V17",
+                    "V8",
+                    "V3_ratio_V21",
+                    "Amount",
+                    "V12",
+                    "V3",
+                    "Class_ratio_V24",
+                    "Class_multiply_V11",
+                    "Class_multiply_V28",
+                    "V11_ratio_Class",
+                    "V28_ratio_Class",
+                    "V4",
+                    "Class",
+                    "V23_sum_V6",
+                    "V1",
+                    "V21",
+                    "V2"
+                ]
+            }
+        },
+        {
+            "scale_y": {
+                "scale": [
+                    1.1102509900760296
+                ],
+                "mean": [
+                    11.01973857047525
+                ],
+                "var": [
+                    1.2326572609648039
+                ],
+                "n_samples_seen": 800,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    235.0
+                ]
+            },
+            "ml_task": "regression",
+            "drop_features": [
+                "V25",
+                "V7",
+                "V22",
+                "V20",
+                "V18",
+                "V24",
+                "V9",
+                "V10",
+                "V6",
+                "V5",
+                "V16",
+                "V19",
+                "V28",
+                "V27",
+                "V23",
+                "V26",
+                "V14",
+                "V17",
+                "V8",
+                "Amount",
+                "V12",
+                "V3",
+                "V4",
+                "Class",
+                "V1",
+                "V21",
+                "V2"
+            ],
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression",
+                "drop_features": [
+                    "V25",
+                    "V18_multiply_V15",
+                    "V7",
+                    "V22",
+                    "V20",
+                    "V24_ratio_V28",
+                    "V18",
+                    "V24",
+                    "random_feature",
+                    "V9",
+                    "V10",
+                    "V6",
+                    "V5",
+                    "V16",
+                    "V19",
+                    "V28",
+                    "V27",
+                    "V23",
+                    "V18_sum_V15",
+                    "V26",
+                    "V14",
+                    "V17",
+                    "V8",
+                    "V3_ratio_V21",
+                    "Amount",
+                    "V12",
+                    "V3",
+                    "Class_ratio_V24",
+                    "Class_multiply_V11",
+                    "Class_multiply_V28",
+                    "V11_ratio_Class",
+                    "V28_ratio_Class",
+                    "V4",
+                    "Class",
+                    "V23_sum_V6",
+                    "V1",
+                    "V21",
+                    "V2"
+                ]
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "018988ec-2636-4a45-8a55-784f8154f3e0",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1237,
+                "objective": "regression",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 1.0,
+                "min_data_in_leaf": 20,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "1358af49-4351-462b-83fe-6d2743a045cc",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1237,
+                "objective": "regression",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 1.0,
+                "min_data_in_leaf": 20,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "3630cb5a-ff45-42e4-aba3-07c03e796fc6",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1237,
+                "objective": "regression",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 1.0,
+                "min_data_in_leaf": 20,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "e34acecb-5eb1-44a1-ad30-6b2906d556e0",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1237,
+                "objective": "regression",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 1.0,
+                "min_data_in_leaf": 20,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "6b505380-4f78-4124-9cbf-2663eaad5937",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1237,
+                "objective": "regression",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 1.0,
+                "min_data_in_leaf": 20,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression",
+            "drop_features": [
+                "V25",
+                "V18_multiply_V15",
+                "V7",
+                "V22",
+                "V20",
+                "V24_ratio_V28",
+                "V18",
+                "V24",
+                "random_feature",
+                "V9",
+                "V10",
+                "V6",
+                "V5",
+                "V16",
+                "V19",
+                "V28",
+                "V27",
+                "V23",
+                "V18_sum_V15",
+                "V26",
+                "V14",
+                "V17",
+                "V8",
+                "V3_ratio_V21",
+                "Amount",
+                "V12",
+                "V3",
+                "Class_ratio_V24",
+                "Class_multiply_V11",
+                "Class_multiply_V28",
+                "V11_ratio_Class",
+                "V28_ratio_Class",
+                "V4",
+                "Class",
+                "V23_sum_V6",
+                "V1",
+                "V21",
+                "V2"
+            ]
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "X_path": "results\\f0daa112-f401-417c-be07-f686ff61f637\\X.data",
+            "y_path": "results\\f0daa112-f401-417c-be07-f686ff61f637\\y.data",
+            "results_path": "results\\f0daa112-f401-417c-be07-f686ff61f637"
+        },
+        "learner": {
+            "model_type": "LightGBM",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1237,
+            "objective": "regression",
+            "num_leaves": 63,
+            "learning_rate": 0.05,
+            "feature_fraction": 0.9,
+            "bagging_fraction": 1.0,
+            "min_data_in_leaf": 20,
+            "metric": "rmse",
+            "custom_eval_metric_name": null,
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 1,
+        "name": "13_LightGBM_SelectedFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_features_selection",
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "13_LightGBM_SelectedFeatures\\learner_fold_0.lightgbm",
+        "13_LightGBM_SelectedFeatures\\learner_fold_1.lightgbm",
+        "13_LightGBM_SelectedFeatures\\learner_fold_2.lightgbm",
+        "13_LightGBM_SelectedFeatures\\learner_fold_3.lightgbm",
+        "13_LightGBM_SelectedFeatures\\learner_fold_4.lightgbm"
+    ],
+    "predictions_fname": "13_LightGBM_SelectedFeatures\\predictions_out_of_folds.csv",
+    "metric_name": "rmse",
+    "final_loss": "55715.89600176226",
+    "train_time": 3.5643913745880127,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "single_prediction_time": 0.03750801086425781
+}

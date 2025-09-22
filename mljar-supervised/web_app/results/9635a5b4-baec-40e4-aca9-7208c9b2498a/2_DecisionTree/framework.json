@@ -1,0 +1,168 @@
+{
+    "uid": "97ec247f-a6e3-475f-9029-ede4f7c642c9",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Sl. No.": {
+                            "1": 0,
+                            "10": 1,
+                            "11": 2,
+                            "12": 3,
+                            "13": 4,
+                            "16": 5,
+                            "17": 6,
+                            "19": 7,
+                            "20": 8,
+                            "23": 9,
+                            "24": 10,
+                            "25": 11,
+                            "26": 12,
+                            "27": 13,
+                            "28": 14,
+                            "29": 15,
+                            "3": 16,
+                            "31": 17,
+                            "32": 18,
+                            "33": 19,
+                            "34": 20,
+                            "35": 21,
+                            "36": 22,
+                            "4": 23,
+                            "6": 24,
+                            "7": 25,
+                            "8": 26
+                        },
+                        "State/UTs": {
+                            "Andhra Pradesh": 0,
+                            "Assam": 1,
+                            "Bihar": 2,
+                            "Chandigarh": 3,
+                            "Dadra and Nagar Haveli and Daman and Diu": 4,
+                            "Delhi": 5,
+                            "Goa": 6,
+                            "Gujarat": 7,
+                            "Himachal Pradesh": 8,
+                            "Jammu and Kashmir": 9,
+                            "Jharkhand": 10,
+                            "Karnataka": 11,
+                            "Kerala": 12,
+                            "Ladakh": 13,
+                            "Lakshadweep": 14,
+                            "Manipur": 15,
+                            "Meghalaya": 16,
+                            "Nagaland": 17,
+                            "Odisha": 18,
+                            "Puducherry": 19,
+                            "Sikkim": 20,
+                            "Tamil Nadu": 21,
+                            "Telangana": 22,
+                            "Tripura": 23,
+                            "Uttar Pradesh": 24,
+                            "Uttarakhand": 25,
+                            "West Bengal": 26
+                        }
+                    },
+                    "columns": [
+                        "Sl. No.",
+                        "State/UTs"
+                    ]
+                }
+            ],
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "Sl. No.": [
+                        "categorical_to_int"
+                    ],
+                    "State/UTs": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "d9052515-491a-4064-b503-c0eca2c6648a",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "squared_error",
+                "max_depth": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Sl. No.": [
+                    "categorical_to_int"
+                ],
+                "State/UTs": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\9635a5b4-baec-40e4-aca9-7208c9b2498a\\X.data",
+            "y_path": "results\\9635a5b4-baec-40e4-aca9-7208c9b2498a\\y.data",
+            "results_path": "results\\9635a5b4-baec-40e4-aca9-7208c9b2498a"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "squared_error",
+            "max_depth": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_DecisionTree\\learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "2.9339961372389944",
+    "train_time": 4.975656032562256,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>AutoML Report - MLJAR</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <style>
+        .report-container {
+            background: #f8f9fa;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .report-header {
+            background: linear-gradient(135deg, #004666 0%, #0099cc 100%);
+            color: white;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        
+        .report-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .report-card-header {
+            background: #004666;
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .report-card-body {
+            padding: 20px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .data-info-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .params-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        
+        .progress-ring-circle {
+            transition: stroke-dasharray 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #004666;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .model-row {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+        
+        .model-row:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .model-row.best-model {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+        }
+        
+        .model-name {
+            font-weight: bold;
+            color: #004666;
+        }
+        
+        .model-type {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .model-score {
+            font-weight: bold;
+            color: #0099cc;
+        }
+        
+        .model-time {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .data-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .data-info-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .data-info-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .data-info-value {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        .btn-view-details {
+            background: #004666;
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-view-details:hover {
+            background: #0099cc;
+            color: white;
+        }
+        
+        .btn-view-details:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .btn-view-details.loading {
+            background-color: #6c757d;
+            cursor: wait;
+        }
+        
+        .progress-bar-custom {
+            background: linear-gradient(90deg, #004666 0%, #0099cc 100%);
+        }
+        
+        .data-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .data-info-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #0099cc;
+        }
+        
+        .data-info-label {
+            font-weight: bold;
+            color: #004666;
+            font-size: 0.9em;
+        }
+        
+        .data-info-value {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 5px;
+        }
+        
+        /* Model Details Styles */
+        #model-details {
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        #model-details.show {
+            max-height: 2000px;
+            opacity: 1;
+            margin-top: 20px;
+        }
+        
+        .model-details-container {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease-out;
+        }
+        
+        #model-details.show .model-details-container {
+            transform: translateY(0);
+        }
+        
+        .model-details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #007bff;
+        }
+        
+        .model-details-header h4 {
+            margin: 0;
+            color: #007bff;
+        }
+        
+        .model-config-section,
+        .feature-importance-section,
+        .visualizations-section {
+            margin-bottom: 25px;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease-out;
+        }
+        
+        #model-details.show .model-config-section {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+        
+        #model-details.show .feature-importance-section {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+        
+        #model-details.show .visualizations-section {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+        
+        .model-config-section h5,
+        .feature-importance-section h5,
+        .visualizations-section h5 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .config-item {
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+        
+        .params-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .param-item {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 3px solid #007bff;
+        }
+        
+        .param-key {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .param-value {
+            color: #6c757d;
+            margin-left: 5px;
+        }
+        
+        .visualization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .visualization-item {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .visualization-item h6 {
+            margin-bottom: 10px;
+            color: #495057;
+            text-transform: capitalize;
+        }
+        
+        .visualization-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .visualization-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <div class="container">
+            <!-- Header -->
+            <div class="report-header text-center">
+                <h1><i class="fas fa-chart-line"></i> AutoML Report</h1>
+                <p class="lead">Comprehensive Machine Learning Analysis Results</p>
+                <div id="session-info" class="mt-3">
+                    <span class="badge badge-light">Session ID: <span id="current-session">Loading...</span></span>
+                    <button id="refresh-report" class="btn btn-sm btn-outline-primary ml-3" onclick="refreshReport()">
+                        <i class="fas fa-sync-alt"></i> Refresh Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="text-center">
+                <div class="loading-spinner">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading report data...</span>
+                    </div>
+                </div>
+                <p class="mt-3">Loading report data...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="alert alert-danger" style="display: none;">
+                <h4><i class="fas fa-exclamation-triangle"></i> Error Loading Report</h4>
+                <p id="error-message">An error occurred while loading the report data.</p>
+                <button class="btn btn-outline-danger" onclick="loadReportData()">
+                    <i class="fas fa-redo"></i> Retry
+                </button>
+            </div>
+
+            <!-- Report Content -->
+            <div id="report-content" style="display: none;">
+                <!-- Dataset Information -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-database"></i> Dataset Information
+                    </div>
+                    <div class="report-card-body">
+                        <div class="data-info-grid" id="dataset-info">
+                            <!-- Dataset info will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Configuration -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-cogs"></i> Training Configuration
+                    </div>
+                    <div class="report-card-body">
+                        <div class="data-info-grid" id="training-config">
+                            <!-- Training config will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Overview -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-trophy"></i> Performance Overview
+                    </div>
+                    <div class="report-card-body">
+                        <div class="row" id="performance-metrics">
+                            <!-- Performance metrics will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Leaderboard -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-list-ol"></i> Model Leaderboard
+                    </div>
+                    <div class="report-card-body">
+                        <div id="leaderboard-container">
+                            <!-- Leaderboard will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Visualization -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-chart-bar"></i> Performance Visualization
+                    </div>
+                    <div class="report-card-body">
+                        <div class="chart-container">
+                            <canvas id="performance-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Graph -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-chart-line"></i> Performance Graph
+                    </div>
+                    <div class="report-card-body">
+                        <div class="text-center">
+                            <img id="performance-graph" class="img-fluid" style="max-width: 100%; height: auto;" alt="Performance Graph">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Boxplot -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-chart-area"></i> Performance Boxplot
+                    </div>
+                    <div class="report-card-body">
+                        <div class="text-center">
+                            <img id="performance-boxplot" class="img-fluid" style="max-width: 100%; height: auto;" alt="Performance Boxplot">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Importance -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-star"></i> Feature Importance
+                    </div>
+                    <div class="report-card-body">
+                        <div class="text-center">
+                            <img id="feature-importance" class="img-fluid" style="max-width: 100%; height: auto;" alt="Feature Importance">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scaled Feature Importance -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-balance-scale"></i> Scaled Feature Importance
+                    </div>
+                    <div class="report-card-body">
+                        <div class="text-center">
+                            <img id="scaled-feature-importance" class="img-fluid" style="max-width: 100%; height: auto;" alt="Scaled Feature Importance">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Correlation Heatmap -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-th"></i> Spearman Correlation of Models
+                    </div>
+                    <div class="report-card-body">
+                        <div class="text-center">
+                            <img id="correlation-heatmap" class="img-fluid" style="max-width: 100%; height: auto;" alt="Correlation Heatmap">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Details -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-info-circle"></i> Model Details
+                    </div>
+                    <div class="report-card-body">
+                        <div id="model-details">
+                            <p class="text-muted">Select a model from the leaderboard to view detailed information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="text-center mt-4">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Back to Training
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    
+    <script>
+        let currentSessionId = null;
+        let reportData = null;
+        let performanceChart = null;
+
+        // Get session ID from URL parameters
+        function getSessionId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('session_id') || urlParams.get('session');
+        }
+
+        // Load report data
+        async function loadReportData() {
+            currentSessionId = getSessionId();
+            
+            if (!currentSessionId) {
+                // Use test results for demonstration
+                currentSessionId = 'test_results';
+            }
+
+            document.getElementById('current-session').textContent = currentSessionId;
+            
+            try {
+                showLoading();
+                
+                // Fetch results data with cache busting
+                const timestamp = new Date().getTime();
+                const response = await fetch(`/api/results/${currentSessionId}?_t=${timestamp}`);
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to load results');
+                }
+                
+                reportData = data;
+                await loadAdditionalData();
+                renderReport();
+                showContent();
+                
+            } catch (error) {
+                console.error('Error loading report:', error);
+                showError(error.message);
+            }
+        }
+
+        // Load additional data (params, data_info)
+        async function loadAdditionalData() {
+            try {
+                const timestamp = new Date().getTime();
+                
+                // Load params.json
+                const paramsResponse = await fetch(`/api/params/${currentSessionId}?_t=${timestamp}`);
+                const paramsData = await paramsResponse.json();
+                reportData.params = paramsData.success ? paramsData.params : {};
+                
+                // Load data_info.json
+                const dataInfoResponse = await fetch(`/api/data_info/${currentSessionId}?_t=${timestamp}`);
+                const dataInfoData = await dataInfoResponse.json();
+                reportData.dataInfo = dataInfoData.success ? dataInfoData.data_info : {};
+                
+            } catch (error) {
+                console.warn('Could not load additional data:', error);
+                reportData.params = {};
+                reportData.dataInfo = {};
+            }
+        }
+
+        // Render the complete report
+        function renderReport() {
+            renderDatasetInfo();
+            renderTrainingConfig();
+            renderPerformanceOverview();
+            renderLeaderboard();
+            renderPerformanceChart();
+            loadVisualizationImages();
+        }
+
+        // Render data information with enhanced visualization
+        function renderDataInfo() {
+            const dataInfo = reportData.dataInfo;
+            
+            return `
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-database"></i> Dataset Information
+                    </div>
+                    <div class="report-card-body">
+                        <div class="data-info-grid">
+                            <div class="data-info-item">
+                                <div class="data-info-label">Total Rows</div>
+                                <div class="data-info-value">${dataInfo.rows || 'N/A'}</div>
+                            </div>
+                            <div class="data-info-item">
+                                <div class="data-info-label">Features</div>
+                                <div class="data-info-value">${dataInfo.n_features || 'N/A'}</div>
+                            </div>
+                            <div class="data-info-item">
+                                <div class="data-info-label">Target Type</div>
+                                <div class="data-info-value">${dataInfo.target_is_numeric ? 'Numeric' : 'Categorical'}</div>
+                            </div>
+                            <div class="data-info-item">
+                                <div class="data-info-label">Classes</div>
+                                <div class="data-info-value">${dataInfo.n_classes || 'N/A'}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render training parameters with enhanced visualization
+        function renderTrainingParams() {
+            const params = reportData.params;
+            
+            return `
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <i class="fas fa-cogs"></i> Training Configuration
+                    </div>
+                    <div class="report-card-body">
+                        <div class="data-info-grid">
+                            <div class="data-info-item">
+                                <div class="data-info-label">Mode</div>
+                                <div class="data-info-value">${params.mode || 'N/A'}</div>
+                            </div>
+                            <div class="data-info-item">
+                                <div class="data-info-label">ML Task</div>
+                                <div class="data-info-value">${params.ml_task || 'N/A'}</div>
+                            </div>
+                            <div class="data-info-item">
+                                <div class="data-info-label">Time Limit</div>
+                                <div class="data-info-value">${params.total_time_limit ? `${params.total_time_limit}s` : 'N/A'}</div>
+                            </div>
+                            <div class="data-info-item">
+                                <div class="data-info-label">Evaluation Metric</div>
+                                <div class="data-info-value">${params.eval_metric || 'N/A'}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render dataset information
+        function renderDatasetInfo() {
+            const container = document.getElementById('dataset-info');
+            const dataInfo = reportData.dataInfo;
+            
+            const items = [
+                { label: 'Total Rows', value: dataInfo.rows || 'N/A' },
+                { label: 'Features', value: dataInfo.n_features || 'N/A' },
+                { label: 'Target Type', value: dataInfo.target_is_numeric ? 'Numeric' : 'Categorical' },
+                { label: 'Classes', value: dataInfo.n_classes || 'N/A' }
+            ];
+            
+            container.innerHTML = items.map(item => `
+                <div class="data-info-item">
+                    <div class="data-info-label">${item.label}</div>
+                    <div class="data-info-value">${item.value}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render training configuration
+        function renderTrainingConfig() {
+            const container = document.getElementById('training-config');
+            const params = reportData.params;
+            
+            const items = [
+                { label: 'Mode', value: params.mode || 'N/A' },
+                { label: 'ML Task', value: params.ml_task || 'N/A' },
+                { label: 'Time Limit', value: params.total_time_limit ? `${params.total_time_limit}s` : 'N/A' },
+                { label: 'Evaluation Metric', value: params.eval_metric || 'N/A' }
+            ];
+            
+            container.innerHTML = items.map(item => `
+                <div class="data-info-item">
+                    <div class="data-info-label">${item.label}</div>
+                    <div class="data-info-value">${item.value}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render performance overview
+        function renderPerformanceOverview() {
+            const container = document.getElementById('performance-metrics');
+            const leaderboard = reportData.leaderboard || [];
+            
+            if (leaderboard.length === 0) {
+                container.innerHTML = '<div class="col-12"><p class="text-muted">No performance data available</p></div>';
+                return;
+            }
+            
+            const bestModel = leaderboard.reduce((best, current) => 
+                (current.metric_value !== 'N/A' && (best.metric_value === 'N/A' || current.metric_value < best.metric_value)) ? current : best
+            );
+            
+            const totalTime = leaderboard.reduce((sum, model) => 
+                sum + (model.train_time !== 'N/A' ? model.train_time : 0), 0
+            );
+            
+            const metrics = [
+                { label: 'Best Model', value: bestModel.name || 'N/A' },
+                { label: 'Best Score', value: bestModel.metric_value !== 'N/A' ? bestModel.metric_value.toFixed(4) : 'N/A' },
+                { label: 'Total Models', value: leaderboard.length },
+                { label: 'Total Training Time', value: `${totalTime.toFixed(2)}s` }
+            ];
+            
+            container.innerHTML = metrics.map(metric => `
+                <div class="col-md-3 col-sm-6">
+                    <div class="metric-card">
+                        <div class="metric-value">${metric.value}</div>
+                        <div class="metric-label">${metric.label}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render leaderboard
+        function renderLeaderboard() {
+            const container = document.getElementById('leaderboard-container');
+            const leaderboard = reportData.leaderboard || [];
+            
+            if (leaderboard.length === 0) {
+                container.innerHTML = '<p class="text-muted">No models found in leaderboard</p>';
+                return;
+            }
+            
+            const bestScore = Math.min(...leaderboard.filter(m => m.metric_value !== 'N/A').map(m => m.metric_value));
+            
+            container.innerHTML = `
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Rank</th>
+                                <th>Model Name</th>
+                                <th>Type</th>
+                                <th>Score</th>
+                                <th>Training Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${leaderboard.map((model, index) => `
+                                <tr class="model-row ${model.metric_value === bestScore ? 'best-model' : ''}">
+                                    <td>${index + 1}</td>
+                                    <td class="model-name">${model.name}</td>
+                                    <td class="model-type">${model.model_type || 'N/A'}</td>
+                                    <td class="model-score">${model.metric_value !== 'N/A' ? model.metric_value.toFixed(4) : 'N/A'}</td>
+                                    <td class="model-time">${model.train_time !== 'N/A' ? model.train_time.toFixed(2) + 's' : 'N/A'}</td>
+                                    <td>
+                                        <button class="btn-view-details" onclick="viewModelDetails('${model.name}')">
+                                            View Details
+                                        </button>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        // Render performance chart
+        function renderPerformanceChart() {
+            const ctx = document.getElementById('performance-chart').getContext('2d');
+            const leaderboard = reportData.leaderboard || [];
+            
+            if (leaderboard.length === 0) return;
+            
+            const validModels = leaderboard.filter(m => m.metric_value !== 'N/A' && m.train_time !== 'N/A');
+            
+            if (performanceChart) {
+                performanceChart.destroy();
+            }
+            
+            performanceChart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Model Performance',
+                        data: validModels.map(model => ({
+                            x: model.train_time,
+                            y: model.metric_value,
+                            label: model.name
+                        })),
+                        backgroundColor: 'rgba(0, 153, 204, 0.6)',
+                        borderColor: 'rgba(0, 70, 102, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Training Time (seconds)'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Score (lower is better)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                        return `${context.raw.label}: Score ${context.raw.y.toFixed(4)}, Time ${context.raw.x.toFixed(2)}s`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load visualization images
+        function loadVisualizationImages() {
+            if (!currentSessionId) return;
+            
+            const visualizations = [
+                { id: 'performance-graph', filename: 'ldb_performance.png' },
+                { id: 'performance-boxplot', filename: 'ldb_performance_boxplot.png' },
+                { id: 'feature-importance', filename: 'features_heatmap.png' },
+                { id: 'scaled-feature-importance', filename: 'features_heatmap_scaled.png' },
+                { id: 'correlation-heatmap', filename: 'correlation_heatmap.png' }
+            ];
+            
+            visualizations.forEach(viz => {
+                const imgElement = document.getElementById(viz.id);
+                if (imgElement) {
+                    imgElement.src = `/api/visualization/${currentSessionId}/${viz.filename}`;
+                    imgElement.onerror = function() {
+                        this.style.display = 'none';
+                        const parent = this.closest('.report-card');
+                        if (parent) {
+                            const errorMsg = document.createElement('div');
+                            errorMsg.className = 'alert alert-warning';
+                            errorMsg.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Visualization not available`;
+                            this.parentNode.appendChild(errorMsg);
+                        }
+                    };
+                }
+            });
+        }
+
+        // View model details
+        async function viewModelDetails(modelName) {
+            const container = document.getElementById('model-details');
+            
+            // Disable all view details buttons during loading
+            const allButtons = document.querySelectorAll('.btn-view-details');
+            allButtons.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('loading');
+            });
+            
+            // If already showing details, hide them first
+            if (container.classList.contains('show')) {
+                hideModelDetails();
+                await new Promise(resolve => setTimeout(resolve, 400)); // Wait for hide animation
+            }
+            
+            // Show loading state with slide animation
+            container.innerHTML = `
+                <div class="model-details-container">
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="sr-only">Loading model details...</span>
+                        </div>
+                        <p class="mt-2">Loading details for ${modelName}...</p>
+                    </div>
+                </div>
+            `;
+            
+            // Trigger slide down animation
+            slideDownModelDetails();
+            
+            try {
+                const timestamp = new Date().getTime();
+                const response = await fetch(`/api/model_details/${currentSessionId}/${modelName}?_t=${timestamp}`);
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to load model details');
+                }
+                
+                const details = data.model_details;
+                renderModelDetails(modelName, details);
+                
+            } catch (error) {
+                console.error('Error loading model details:', error);
+                container.innerHTML = `
+                    <div class="model-details-container">
+                        <div class="alert alert-danger">
+                            <h5><i class="fas fa-exclamation-triangle"></i> Error</h5>
+                            <p>Failed to load details for ${modelName}: ${error.message}</p>
+                        </div>
+                    </div>
+                `;
+            } finally {
+                // Re-enable all buttons
+                allButtons.forEach(btn => {
+                    btn.disabled = false;
+                    btn.classList.remove('loading');
+                });
+            }
+        }
+        
+        // Render model details
+        function renderModelDetails(modelName, details) {
+            const container = document.getElementById('model-details');
+            
+            let html = `
+                <div class="model-details-container">
+                    <div class="model-details-header">
+                        <h4><i class="fas fa-robot"></i> ${modelName}</h4>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="hideModelDetails()">
+                            <i class="fas fa-times"></i> Close
+                        </button>
+                    </div>
+            `;
+            
+            // Model Configuration
+            if (details.framework && details.framework.learners && details.framework.learners.length > 0) {
+                const learner = details.framework.learners[0];
+                html += `
+                    <div class="model-config-section">
+                        <h5><i class="fas fa-cogs"></i> Configuration</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="config-item">
+                                    <strong>Algorithm:</strong> ${learner.algorithm_name || 'N/A'}
+                                </div>
+                                <div class="config-item">
+                                    <strong>Library Version:</strong> ${learner.library_version || 'N/A'}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="config-item">
+                                    <strong>ML Task:</strong> ${learner.params?.ml_task || 'N/A'}
+                                </div>
+                                <div class="config-item">
+                                    <strong>Seed:</strong> ${learner.params?.seed || 'N/A'}
+                                </div>
+                            </div>
+                        </div>
+                `;
+                
+                // Algorithm-specific parameters
+                if (learner.params) {
+                    html += `
+                        <div class="mt-3">
+                            <h6>Algorithm Parameters:</h6>
+                            <div class="params-grid">
+                    `;
+                    
+                    Object.entries(learner.params).forEach(([key, value]) => {
+                        if (!['model_type', 'ml_task', 'n_jobs', 'seed', 'explain_level'].includes(key)) {
+                            html += `
+                                <div class="param-item">
+                                    <span class="param-key">${key}:</span>
+                                    <span class="param-value">${value}</span>
+                                </div>
+                            `;
+                        }
+                    });
+                    
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                html += `</div>`;
+            }
+            
+            // Feature Importance
+            if (details.feature_importance && details.feature_importance.length > 0) {
+                html += `
+                    <div class="feature-importance-section">
+                        <h5><i class="fas fa-chart-bar"></i> Feature Importance</h5>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Importance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                `;
+                
+                details.feature_importance.slice(0, 10).forEach(item => {
+                    const importance = typeof item.importance === 'number' ? item.importance.toFixed(4) : item.importance;
+                    html += `
+                        <tr>
+                            <td>${item.feature || item.Feature || 'N/A'}</td>
+                            <td>${importance || 'N/A'}</td>
+                        </tr>
+                    `;
+                });
+                
+                html += `
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Visualizations
+            if (details.visualizations && details.visualizations.length > 0) {
+                html += `
+                    <div class="visualizations-section">
+                        <h5><i class="fas fa-chart-line"></i> Visualizations</h5>
+                        <div class="visualization-grid">
+                `;
+                
+                details.visualizations.forEach(viz => {
+                    const vizName = viz.replace(/\.(png|jpg|jpeg)$/i, '').replace(/_/g, ' ');
+                    html += `
+                        <div class="visualization-item">
+                            <h6>${vizName}</h6>
+                            <img src="/api/visualization/${currentSessionId}/${modelName}/${viz}" 
+                                 alt="${vizName}" 
+                                 class="img-fluid visualization-image"
+                                 onclick="showImageModal(this.src, '${vizName}')">
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            }
+            
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+        
+        // Slide down animation
+        function slideDownModelDetails() {
+            const container = document.getElementById('model-details');
+            container.classList.add('show');
+            
+            // Smooth scroll to the model details section
+            setTimeout(() => {
+                container.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }, 200);
+        }
+        
+        // Slide up animation
+        function slideUpModelDetails() {
+            const container = document.getElementById('model-details');
+            container.classList.remove('show');
+        }
+        
+        // Hide model details
+        function hideModelDetails() {
+            const container = document.getElementById('model-details');
+            
+            // Start slide up animation
+            slideUpModelDetails();
+            
+            // After animation completes, reset content
+            setTimeout(() => {
+                container.innerHTML = `
+                    <p class="text-muted">Select a model from the leaderboard to view detailed information.</p>
+                `;
+            }, 400);
+        }
+
+
+
+        // UI state management
+        function showLoading() {
+            document.getElementById('loading-state').style.display = 'block';
+            document.getElementById('error-state').style.display = 'none';
+            document.getElementById('report-content').style.display = 'none';
+        }
+
+        function showError(message) {
+            document.getElementById('error-message').textContent = message;
+            document.getElementById('loading-state').style.display = 'none';
+            document.getElementById('error-state').style.display = 'block';
+            document.getElementById('report-content').style.display = 'none';
+        }
+
+        function showContent() {
+            document.getElementById('loading-state').style.display = 'none';
+            document.getElementById('error-state').style.display = 'none';
+            document.getElementById('report-content').style.display = 'block';
+        }
+
+        // Refresh report data
+        function refreshReport() {
+            const refreshBtn = document.getElementById('refresh-report');
+            const originalText = refreshBtn.innerHTML;
+            refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
+            refreshBtn.disabled = true;
+            
+            loadReportData().finally(() => {
+                refreshBtn.innerHTML = originalText;
+                refreshBtn.disabled = false;
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadReportData);
+    </script>
+</body>
+</html>

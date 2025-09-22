@@ -1,0 +1,16 @@
+if (date_2103 <= 0.823) and (date_2185 <= 0.802) and (evictions > 10.5) then response: 8.983 | based on 74,155 samples
+
+if (date_2103 <= 0.823) and (date_2185 <= 0.802) and (evictions <= 10.5) then response: 9.367 | based on 788 samples
+
+if (date_2103 <= 0.823) and (date_2185 > 0.802) and (date_08 <= 0.386) then response: 11.414 | based on 35 samples
+
+if (date_2103 > 0.823) and (date_2103 > 0.847) and (evictions > 16.5) then response: 6.245 | based on 11 samples
+
+if (date_2103 <= 0.823) and (date_2185 > 0.802) and (date_08 > 0.386) then response: 5.482 | based on 4 samples
+
+if (date_2103 > 0.823) and (date_2103 <= 0.847) and (er_visits <= 676.0) then response: 3.197 | based on 3 samples
+
+if (date_2103 > 0.823) and (date_2103 > 0.847) and (evictions <= 16.5) then response: 11.975 | based on 2 samples
+
+if (date_2103 > 0.823) and (date_2103 <= 0.847) and (er_visits > 676.0) then response: 5.015 | based on 2 samples
+

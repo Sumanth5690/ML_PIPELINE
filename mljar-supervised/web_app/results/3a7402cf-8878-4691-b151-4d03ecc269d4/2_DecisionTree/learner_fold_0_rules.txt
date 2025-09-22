@@ -1,0 +1,16 @@
+if (Y > 242.206) and (Y > 367.924) and (Y > 429.921) then response: 92.757 | based on 110 samples
+
+if (Y > 242.206) and (Y <= 367.924) and (Y > 298.887) then response: 64.633 | based on 108 samples
+
+if (Y <= 242.206) and (Y <= 125.88) and (Y > 57.926) then response: 16.448 | based on 105 samples
+
+if (Y <= 242.206) and (Y > 125.88) and (Y > 177.798) then response: 40.544 | based on 92 samples
+
+if (Y > 242.206) and (Y > 367.924) and (Y <= 429.921) then response: 78.647 | based on 90 samples
+
+if (Y > 242.206) and (Y <= 367.924) and (Y <= 298.887) then response: 53.155 | based on 89 samples
+
+if (Y <= 242.206) and (Y <= 125.88) and (Y <= 57.926) then response: 5.357 | based on 81 samples
+
+if (Y <= 242.206) and (Y > 125.88) and (Y <= 177.798) then response: 29.166 | based on 75 samples
+

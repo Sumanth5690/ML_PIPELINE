@@ -1,0 +1,2 @@
+name,model_type,metric_type,metric_value,train_time
+1_Baseline,Baseline,rmse,2.5655991148614348,0.59

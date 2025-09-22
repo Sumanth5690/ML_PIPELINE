@@ -1,0 +1,33 @@
+{
+    "columns": [
+        "Sl. No.",
+        "State/UTs",
+        "2022-23",
+        "2023-24"
+    ],
+    "rows": 37,
+    "cols": 4,
+    "target_is_numeric": true,
+    "columns_info": {
+        "Sl. No.": [
+            "categorical",
+            "many_categories"
+        ],
+        "State/UTs": [
+            "categorical",
+            "many_categories"
+        ],
+        "2022-23": [
+            "scale"
+        ],
+        "2023-24": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "scale_log"
+    ],
+    "n_features": 4,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false
+}

@@ -1,0 +1,31 @@
+{
+    "columns": [
+        "temperature",
+        "humidity",
+        "latitude",
+        "longitude"
+    ],
+    "rows": 1000,
+    "cols": 4,
+    "target_is_numeric": true,
+    "columns_info": {
+        "temperature": [
+            "scale"
+        ],
+        "humidity": [
+            "scale"
+        ],
+        "latitude": [
+            "scale"
+        ],
+        "longitude": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "scale_log"
+    ],
+    "n_features": 4,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false
+}

@@ -1,0 +1,14 @@
+if (2023-24 <= 7.85) and (2023-24 > 5.0) and (2022-23 <= 11.85) then response: 8.733 | based on 9 samples
+
+if (2023-24 <= 7.85) and (2023-24 <= 5.0) and (2022-23 <= 8.15) then response: 4.9 | based on 6 samples
+
+if (2023-24 > 7.85) and (2022-23 <= 10.5) and (2022-23 > 4.4) then response: 9.1 | based on 3 samples
+
+if (2023-24 > 7.85) and (2022-23 <= 10.5) and (2022-23 <= 4.4) then response: 13.067 | based on 3 samples
+
+if (2023-24 <= 7.85) and (2023-24 > 5.0) and (2022-23 > 11.85) then response: 5.633 | based on 3 samples
+
+if (2023-24 <= 7.85) and (2023-24 <= 5.0) and (2022-23 > 8.15) then response: 2.9 | based on 2 samples
+
+if (2023-24 > 7.85) and (2022-23 > 10.5) then response: 21.1 | based on 1 samples
+

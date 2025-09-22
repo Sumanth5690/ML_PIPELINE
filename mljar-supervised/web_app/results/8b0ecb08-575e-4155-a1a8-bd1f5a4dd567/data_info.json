@@ -1,0 +1,43 @@
+{
+    "columns": [
+        "City Name",
+        "Year",
+        "Zone Name",
+        "Ward Name",
+        "Ward No.",
+        "No. of employed persons",
+        "Total labour force in the city _age 15to59"
+    ],
+    "rows": 3,
+    "cols": 7,
+    "target_is_numeric": true,
+    "columns_info": {
+        "City Name": [
+            "constant_column"
+        ],
+        "Year": [
+            "scale"
+        ],
+        "Zone Name": [
+            "constant_column"
+        ],
+        "Ward Name": [
+            "constant_column"
+        ],
+        "Ward No.": [
+            "constant_column"
+        ],
+        "No. of employed persons": [
+            "scale"
+        ],
+        "Total labour force in the city _age 15to59": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 7,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false,
+    "n_classes": 3,
+    "num_class": 3
+}

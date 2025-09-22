@@ -1,0 +1,166 @@
+{
+    "uid": "4efe1f23-b41d-47d7-b283-4e0910dccd6b",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "City Name",
+                "Zone Name",
+                "Ward Name",
+                "Ward No."
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        0.816496580927726,
+                        111.20251795710384,
+                        6945.249071607631
+                    ],
+                    "mean": [
+                        2019.0,
+                        71091.0,
+                        81454.0
+                    ],
+                    "var": [
+                        0.6666666666666666,
+                        12366.0,
+                        48236484.666666664
+                    ],
+                    "n_samples_seen": 45,
+                    "n_features_in": 3,
+                    "columns": [
+                        "Year",
+                        "No. of employed persons",
+                        "Total labour force in the city _age 15to59"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "5394": 0,
+                "5621": 1,
+                "20074": 2
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "City Name": [
+                        "remove_column"
+                    ],
+                    "Year": [
+                        "scale_normal"
+                    ],
+                    "Zone Name": [
+                        "remove_column"
+                    ],
+                    "Ward Name": [
+                        "remove_column"
+                    ],
+                    "Ward No.": [
+                        "remove_column"
+                    ],
+                    "No. of employed persons": [
+                        "scale_normal"
+                    ],
+                    "Total labour force in the city _age 15to59": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "cb8cee24-59b3-4a6c-b359-9ee5d8298ecb",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "num_class": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "City Name": [
+                    "remove_column"
+                ],
+                "Year": [
+                    "scale_normal"
+                ],
+                "Zone Name": [
+                    "remove_column"
+                ],
+                "Ward Name": [
+                    "remove_column"
+                ],
+                "Ward No.": [
+                    "remove_column"
+                ],
+                "No. of employed persons": [
+                    "scale_normal"
+                ],
+                "Total labour force in the city _age 15to59": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\8b0ecb08-575e-4155-a1a8-bd1f5a4dd567\\X.data",
+            "y_path": "results\\8b0ecb08-575e-4155-a1a8-bd1f5a4dd567\\y.data",
+            "results_path": "results\\8b0ecb08-575e-4155-a1a8-bd1f5a4dd567"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "num_class": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.04285670240004021",
+    "train_time": 5.5676562786102295,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

@@ -1,0 +1,6 @@
+feature,shap_importance
+predicted_irradiation,0.70649827
+temperature,0.41345176
+irradiation,0.02983681
+wind_speed,0.025271008
+pv_power,0.01854843

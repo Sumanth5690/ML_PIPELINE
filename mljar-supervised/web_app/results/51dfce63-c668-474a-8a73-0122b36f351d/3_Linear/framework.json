@@ -1,0 +1,167 @@
+{
+    "uid": "c47b3e01-f15f-4c77-bcd4-1957de56db47",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "date"
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        27.245497895167116,
+                        4.291310656515372,
+                        2.0954101670713046,
+                        19.407334237916917
+                    ],
+                    "mean": [
+                        57.61333333333334,
+                        13.269190842942209,
+                        6.077619912341914,
+                        113.09333333333333
+                    ],
+                    "var": [
+                        742.3171555555557,
+                        18.415347150722393,
+                        4.390743768265793,
+                        376.64462222222227
+                    ],
+                    "n_samples_seen": 75,
+                    "n_features_in": 4,
+                    "columns": [
+                        "evictions",
+                        "school_absenteeism",
+                        "poverty_rate",
+                        "er_visits"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.4626138996218073
+                ],
+                "mean": [
+                    1.121159331190583
+                ],
+                "var": [
+                    0.21401162012329564
+                ],
+                "n_samples_seen": 75,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    4.502601884976579
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "date": [
+                        "remove_column"
+                    ],
+                    "evictions": [
+                        "scale_normal"
+                    ],
+                    "school_absenteeism": [
+                        "scale_normal"
+                    ],
+                    "poverty_rate": [
+                        "scale_normal"
+                    ],
+                    "er_visits": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "e0de7f71-1a27-4eb8-9aea-4f4952439851",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "date": [
+                    "remove_column"
+                ],
+                "evictions": [
+                    "scale_normal"
+                ],
+                "school_absenteeism": [
+                    "scale_normal"
+                ],
+                "poverty_rate": [
+                    "scale_normal"
+                ],
+                "er_visits": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\51dfce63-c668-474a-8a73-0122b36f351d\\X.data",
+            "y_path": "results\\51dfce63-c668-474a-8a73-0122b36f351d\\y.data",
+            "results_path": "results\\51dfce63-c668-474a-8a73-0122b36f351d"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "1.4245257283854929",
+    "train_time": 1.859053134918213,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

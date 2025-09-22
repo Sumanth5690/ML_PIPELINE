@@ -1,0 +1,16 @@
+if (predicted_irradiation <= 1048.847) and (predicted_irradiation > 899.049) and (temperature > 27.439) then response: 69.965 | based on 130 samples
+
+if (predicted_irradiation > 1048.847) and (predicted_irradiation <= 1161.374) and (temperature <= 33.064) then response: 27.045 | based on 111 samples
+
+if (predicted_irradiation <= 1048.847) and (predicted_irradiation > 899.049) and (temperature <= 27.439) then response: 45.459 | based on 98 samples
+
+if (predicted_irradiation > 1048.847) and (predicted_irradiation <= 1161.374) and (temperature > 33.064) then response: 54.227 | based on 96 samples
+
+if (predicted_irradiation <= 1048.847) and (predicted_irradiation <= 899.049) and (temperature <= 22.34) then response: 72.579 | based on 89 samples
+
+if (predicted_irradiation > 1048.847) and (predicted_irradiation > 1161.374) and (temperature <= 37.298) then response: 18.167 | based on 82 samples
+
+if (predicted_irradiation <= 1048.847) and (predicted_irradiation <= 899.049) and (temperature > 22.34) then response: 81.609 | based on 79 samples
+
+if (predicted_irradiation > 1048.847) and (predicted_irradiation > 1161.374) and (temperature > 37.298) then response: 26.579 | based on 65 samples
+

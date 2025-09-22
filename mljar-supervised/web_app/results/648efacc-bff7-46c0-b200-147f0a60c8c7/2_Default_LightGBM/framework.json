@@ -1,0 +1,378 @@
+{
+    "uid": "c87f4dd3-1ff9-4a8f-a827-e6d4c2e73c36",
+    "name": "2_Default_LightGBM",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "1285813f-2a4e-4f37-94e3-577308ec0bf9",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "4d38292d-759a-431a-a650-f327621b2ec3",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "ca1235ff-9c59-42fe-bac6-fb8f6b5b6bc3",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "68b58cfa-4a35-4ad5-9a34-9edbfbebf867",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "4.6.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "11fbfaca-52bc-48e2-93da-65ec6d4f2e24",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.9,
+                "min_data_in_leaf": 10,
+                "seed": 2,
+                "metric": "binary_logloss",
+                "custom_eval_metric_name": null,
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "education": [
+                    "categorical_to_int"
+                ],
+                "city_size": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7\\X.data",
+            "y_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7\\y.data",
+            "results_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7"
+        },
+        "learner": {
+            "model_type": "LightGBM",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "objective": "binary",
+            "num_leaves": 63,
+            "learning_rate": 0.05,
+            "feature_fraction": 0.9,
+            "bagging_fraction": 0.9,
+            "min_data_in_leaf": 10,
+            "seed": 2,
+            "metric": "binary_logloss",
+            "custom_eval_metric_name": null,
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Default_LightGBM",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "2_Default_LightGBM\\learner_fold_0.lightgbm",
+        "2_Default_LightGBM\\learner_fold_1.lightgbm",
+        "2_Default_LightGBM\\learner_fold_2.lightgbm",
+        "2_Default_LightGBM\\learner_fold_3.lightgbm",
+        "2_Default_LightGBM\\learner_fold_4.lightgbm"
+    ],
+    "predictions_fname": "2_Default_LightGBM\\predictions_out_of_folds.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.1297127450758428",
+    "train_time": 5.172486066818237,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.1215433795562491,
+    "single_prediction_time": 0.03414106369018555
+}

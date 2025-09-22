@@ -1,0 +1,701 @@
+{
+    "uid": "cdf7ca15-b4e8-4c1b-9bc4-2687ed925e04",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        8.11916858043359,
+                        14853.154915286515,
+                        0.7281987623581903,
+                        6.548422400662621,
+                        0.8454843286542927,
+                        76.07497843410802,
+                        1.0,
+                        0.5
+                    ],
+                    "mean": [
+                        32.21875,
+                        46593.75,
+                        0.96875,
+                        8.15625,
+                        1.1875,
+                        705.3125,
+                        1.25,
+                        0.5
+                    ],
+                    "var": [
+                        65.9208984375,
+                        220616210.9375,
+                        0.5302734375,
+                        42.8818359375,
+                        0.71484375,
+                        5787.40234375,
+                        1.0,
+                        0.25
+                    ],
+                    "n_samples_seen": 32,
+                    "n_features_in": 8,
+                    "columns": [
+                        "age",
+                        "income",
+                        "education",
+                        "work_experience",
+                        "city_size",
+                        "credit_score",
+                        "dependents",
+                        "homeowner"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "income": [
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "work_experience": [
+                        "scale_normal"
+                    ],
+                    "city_size": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "credit_score": [
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "homeowner": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        7.753779320434648,
+                        13815.18639034595,
+                        0.739509972887452,
+                        6.538049690083428,
+                        0.7799989983967928,
+                        72.10493113338366,
+                        0.8816709987291178,
+                        0.4990224819584785
+                    ],
+                    "mean": [
+                        31.9375,
+                        46125.0,
+                        0.875,
+                        7.9375,
+                        1.21875,
+                        705.9375,
+                        1.1875,
+                        0.46875
+                    ],
+                    "var": [
+                        60.12109375,
+                        190859375.0,
+                        0.546875,
+                        42.74609375,
+                        0.6083984375,
+                        5199.12109375,
+                        0.77734375,
+                        0.2490234375
+                    ],
+                    "n_samples_seen": 32,
+                    "n_features_in": 8,
+                    "columns": [
+                        "age",
+                        "income",
+                        "education",
+                        "work_experience",
+                        "city_size",
+                        "credit_score",
+                        "dependents",
+                        "homeowner"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "income": [
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "work_experience": [
+                        "scale_normal"
+                    ],
+                    "city_size": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "credit_score": [
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "homeowner": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        8.413565590015924,
+                        14922.586697687502,
+                        0.7281987623581903,
+                        6.996581196377271,
+                        0.8699631816921909,
+                        75.81845092060375,
+                        1.0606601717798212,
+                        0.49607837082461076
+                    ],
+                    "mean": [
+                        32.34375,
+                        46937.5,
+                        0.96875,
+                        8.28125,
+                        1.15625,
+                        706.25,
+                        1.25,
+                        0.4375
+                    ],
+                    "var": [
+                        70.7880859375,
+                        222683593.75,
+                        0.5302734375,
+                        48.9521484375,
+                        0.7568359375,
+                        5748.4375,
+                        1.125,
+                        0.24609375
+                    ],
+                    "n_samples_seen": 32,
+                    "n_features_in": 8,
+                    "columns": [
+                        "age",
+                        "income",
+                        "education",
+                        "work_experience",
+                        "city_size",
+                        "credit_score",
+                        "dependents",
+                        "homeowner"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "income": [
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "work_experience": [
+                        "scale_normal"
+                    ],
+                    "city_size": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "credit_score": [
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "homeowner": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        7.720710783341129,
+                        13744.88541239977,
+                        0.739509972887452,
+                        6.356514252127497,
+                        0.7799989983967928,
+                        69.63913680539126,
+                        1.018865024181319,
+                        0.5
+                    ],
+                    "mean": [
+                        32.125,
+                        46625.0,
+                        0.875,
+                        7.96875,
+                        1.21875,
+                        705.625,
+                        1.34375,
+                        0.5
+                    ],
+                    "var": [
+                        59.609375,
+                        188921875.0,
+                        0.546875,
+                        40.4052734375,
+                        0.6083984375,
+                        4849.609375,
+                        1.0380859375,
+                        0.25
+                    ],
+                    "n_samples_seen": 32,
+                    "n_features_in": 8,
+                    "columns": [
+                        "age",
+                        "income",
+                        "education",
+                        "work_experience",
+                        "city_size",
+                        "credit_score",
+                        "dependents",
+                        "homeowner"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "income": [
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "work_experience": [
+                        "scale_normal"
+                    ],
+                    "city_size": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "credit_score": [
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "homeowner": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        7.959860237466485,
+                        14240.916787113812,
+                        0.7261843774138906,
+                        6.67310073635188,
+                        0.7799989983967928,
+                        71.32397475603838,
+                        0.9916644782889019,
+                        0.4990224819584785
+                    ],
+                    "mean": [
+                        32.125,
+                        46593.75,
+                        0.8125,
+                        8.03125,
+                        1.21875,
+                        705.625,
+                        1.21875,
+                        0.46875
+                    ],
+                    "var": [
+                        63.359375,
+                        202803710.9375,
+                        0.52734375,
+                        44.5302734375,
+                        0.6083984375,
+                        5087.109375,
+                        0.9833984375,
+                        0.2490234375
+                    ],
+                    "n_samples_seen": 32,
+                    "n_features_in": 8,
+                    "columns": [
+                        "age",
+                        "income",
+                        "education",
+                        "work_experience",
+                        "city_size",
+                        "credit_score",
+                        "dependents",
+                        "homeowner"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "income": [
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "work_experience": [
+                        "scale_normal"
+                    ],
+                    "city_size": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "credit_score": [
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "homeowner": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "84ad3e77-cd85-40c5-a96f-bf867e74ced7",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "fd087674-62c5-471d-91ea-49b62b8444d0",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "682eae75-f27a-4abf-815b-ed1e0eb1dad3",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "7cbc7a59-3fdb-4b1a-85e1-f7088b0605fa",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "2324d8cb-16ed-487c-863b-9822fd38f389",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "age": [
+                    "scale_normal"
+                ],
+                "income": [
+                    "scale_normal"
+                ],
+                "education": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "work_experience": [
+                    "scale_normal"
+                ],
+                "city_size": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "credit_score": [
+                    "scale_normal"
+                ],
+                "dependents": [
+                    "scale_normal"
+                ],
+                "homeowner": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7\\X.data",
+            "y_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7\\y.data",
+            "results_path": "results\\648efacc-bff7-46c0-b200-147f0a60c8c7"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 72.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork\\learner_fold_0.neural_network",
+        "5_Default_NeuralNetwork\\learner_fold_1.neural_network",
+        "5_Default_NeuralNetwork\\learner_fold_2.neural_network",
+        "5_Default_NeuralNetwork\\learner_fold_3.neural_network",
+        "5_Default_NeuralNetwork\\learner_fold_4.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork\\predictions_out_of_folds.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.31023413900957997",
+    "train_time": 13.430298089981079,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.4022827558772821,
+    "single_prediction_time": 0.3800828456878662
+}

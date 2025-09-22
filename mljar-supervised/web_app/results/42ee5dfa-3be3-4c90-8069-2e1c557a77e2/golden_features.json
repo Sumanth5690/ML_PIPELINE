@@ -1,0 +1,6 @@
+{
+    "new_features": [],
+    "new_columns": [],
+    "ml_task": "binary_classification",
+    "error": "Golden Features not created. No continous features. Input data shape: (32, 0), (32,)"
+}

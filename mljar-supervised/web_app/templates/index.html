@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGRESSION ANALYTICS</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        font-weight: 300;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #1a1a1a !important;
+        border-bottom: 1px solid #333;
+        padding: 1.5rem 0;
+      }
+
+      .navbar-brand {
+        font-weight: 400;
+        font-size: 1.25rem;
+        color: #ffffff !important;
+        letter-spacing: 0.5px;
+      }
+
+      .navbar .nav-link {
+        color: #888 !important;
+        transition: color 0.3s ease;
+        font-weight: 300;
+      }
+
+      .navbar .nav-link:hover {
+        color: #ffffff !important;
+      }
+
+      .container {
+        max-width: 900px;
+      }
+
+      /* Cards */
+      .card {
+        background-color: #222222;
+        border: 1px solid #333333;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        border-color: #444444;
+      }
+
+      .card-header {
+        background-color: transparent;
+        border-bottom: 1px solid #333333;
+        padding: 1.5rem 2rem;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .card-header h4 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.25rem;
+        color: #ffffff;
+      }
+
+      .card-body {
+        padding: 2rem;
+      }
+
+      /* Form Controls */
+      .form-control,
+      .form-select {
+        background-color: #1a1a1a;
+        border: 1px solid #333333;
+        color: #ffffff;
+        border-radius: 6px;
+        padding: 0.75rem 1rem;
+        font-weight: 300;
+        transition: all 0.3s ease;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        background-color: #1a1a1a;
+        border-color: #666666;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+      }
+
+      .form-control::placeholder {
+        color: #666666;
+      }
+
+      .form-select option {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+
+      .form-label {
+        color: #cccccc;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      /* Buttons */
+      .btn {
+        border-radius: 6px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 300;
+        transition: all 0.3s ease;
+        border: none;
+        font-size: 0.95rem;
+      }
+
+      .btn-primary {
+        background-color: #ffffff;
+        color: #1a1a1a;
+      }
+
+      .btn-primary:hover {
+        background-color: #f0f0f0;
+        color: #1a1a1a;
+      }
+
+      .btn-success {
+        background-color: #28a745;
+        color: #ffffff;
+      }
+
+      .btn-success:hover {
+        background-color: #218838;
+      }
+
+      .btn-info {
+        background-color: #17a2b8;
+        color: #ffffff;
+      }
+
+      .btn-info:hover {
+        background-color: #138496;
+      }
+
+      .btn-secondary {
+        background-color: #333333;
+        color: #ffffff;
+        border: 1px solid #444444;
+      }
+
+      .btn-secondary:hover {
+        background-color: #444444;
+        border-color: #555555;
+      }
+
+      /* Progress Bar */
+      .progress {
+        height: 8px;
+        background-color: #333333;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background-color: #ffffff;
+        transition: width 0.6s ease;
+      }
+
+      /* Table */
+      .table {
+        color: #ffffff;
+        margin: 0;
+      }
+
+      .table thead th {
+        background-color: transparent;
+        border-color: #333333;
+        color: #cccccc;
+        font-weight: 300;
+        padding: 1rem;
+        border-top: none;
+      }
+
+      .table tbody td {
+        border-color: #333333;
+        padding: 1rem;
+        vertical-align: middle;
+      }
+
+      .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+
+      /* Alert */
+      .alert-info {
+        background-color: #1e3a5f;
+        border: 1px solid #2980b9;
+        color: #ffffff;
+        border-radius: 6px;
+      }
+
+      /* Modal */
+      .modal-content {
+        background-color: #222222;
+        border: 1px solid #333333;
+        border-radius: 8px;
+      }
+
+      .modal-header {
+        background-color: transparent;
+        border-bottom: 1px solid #333333;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .modal-title {
+        color: #ffffff;
+        font-weight: 300;
+      }
+
+      .btn-close {
+        filter: invert(1);
+        opacity: 0.6;
+      }
+
+      .btn-close:hover {
+        opacity: 1;
+      }
+
+      /* Status indicator */
+      #trainingStatus {
+        color: #cccccc;
+        font-weight: 300;
+      }
+
+
+
+      /* Subtle animations */
+      .fade-in {
+        animation: fadeIn 0.4s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #444444;
+        border-radius: 3px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #666666;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .card-body {
+          padding: 1.5rem;
+        }
+
+        .card-header {
+          padding: 1.25rem 1.5rem;
+        }
+
+        .navbar {
+          padding: 1rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-chart-line me-2"></i>
+          Regression Analytics
+        </a>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/report" target="_blank">
+            View Demo Report
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <!-- Upload Section -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card fade-in">
+            <div class="card-header">
+              <h4>Upload Dataset</h4>
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="fileInput" class="form-label"
+                  >Choose CSV File</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="fileInput"
+                  accept=".csv"
+                />
+              </div>
+              <div id="fileInfo" class="alert alert-info" style="display: none">
+                <h6>File Information:</h6>
+                <p id="fileDetails"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Configuration Section -->
+      <div class="row" id="configSection" style="display: none">
+        <div class="col-12">
+          <div class="card fade-in">
+            <div class="card-header">
+              <h4>Training Configuration</h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="targetColumn" class="form-label"
+                      >Target Column</label
+                    >
+                    <select class="form-select" id="targetColumn">
+                      <option value="">Select target column...</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="mode" class="form-label">Mode</label>
+                    <select class="form-select" id="mode">
+                      <option value="Explain">Explain</option>
+                      <option value="Perform">Perform</option>
+                      <option value="Compete">Compete</option>
+                      <option value="Optuna">Optuna</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-4">
+                    <label for="timeLimit" class="form-label"
+                      >Time Limit (seconds)</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="timeLimit"
+                      value="3600"
+                      min="60"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" id="startTraining">
+                Start Training
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Training Progress -->
+      <div class="row" id="trainingSection" style="display: none">
+        <div class="col-12">
+          <div class="card fade-in">
+            <div class="card-header">
+              <h4>Training Progress</h4>
+            </div>
+            <div class="card-body">
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  style="width: 0%"
+                  id="progressBar"
+                ></div>
+              </div>
+              <div id="trainingStatus" class="text-center">
+                <i class="fas fa-spinner fa-spin me-2"></i>
+                <span>Training in progress...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div class="row" id="resultsSection" style="display: none">
+        <div class="col-12">
+          <div class="card fade-in">
+            <div class="card-header">
+              <h4>Results</h4>
+            </div>
+            <div class="card-body">
+              <div class="row mb-4">
+                <div class="col-md-6 mb-3">
+                  <button class="btn btn-success w-100" id="viewReport">
+                    View Full Report
+                  </button>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <button class="btn btn-info w-100" id="makePrediction">
+                    Make Predictions
+                  </button>
+                </div>
+              </div>
+
+              <div id="leaderboard">
+                <h5 style="font-weight: 300; margin-bottom: 1.5rem">
+                  Model Leaderboard
+                </h5>
+                <div class="table-responsive">
+                  <table class="table table-striped" id="leaderboardTable">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Model</th>
+                        <th>Score</th>
+                        <th>Time</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prediction Modal -->
+      <div class="modal fade" id="predictionModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Make Predictions</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label"
+                  >Enter data for prediction (JSON format):</label
+                >
+                <textarea
+                  class="form-control"
+                  id="predictionData"
+                  rows="10"
+                  placeholder='[{"feature1": "value1", "feature2": "value2"}, ...]'
+                ></textarea>
+              </div>
+              <div id="predictionResults"></div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" id="runPrediction">
+                Run Prediction
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+      // Initialize AutoML App
+      document.addEventListener('DOMContentLoaded', function() {
+        window.automlApp = new AutoMLApp();
+        console.log("AutoML App initialized successfully");
+      });
+
+      console.log("Clean dark theme Regression Analytics interface loaded");
+    </script>
+  </body>
+</html>

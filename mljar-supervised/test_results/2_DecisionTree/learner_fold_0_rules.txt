@@ -1,0 +1,14 @@
+if (feature_1 <= 0.633) and (feature_2 <= 0.836) and (feature_2 <= 0.741) then class: 0 (proba: 54.55%) | based on 33 samples
+
+if (feature_1 > 0.633) and (feature_1 <= 0.903) and (feature_2 > 0.441) then class: 1 (proba: 57.14%) | based on 14 samples
+
+if (feature_1 > 0.633) and (feature_1 <= 0.903) and (feature_2 <= 0.441) then class: 1 (proba: 100.0%) | based on 11 samples
+
+if (feature_1 <= 0.633) and (feature_2 > 0.836) and (feature_2 > 0.907) then class: 0 (proba: 50.0%) | based on 6 samples
+
+if (feature_1 <= 0.633) and (feature_2 <= 0.836) and (feature_2 > 0.741) then class: 0 (proba: 100.0%) | based on 5 samples
+
+if (feature_1 > 0.633) and (feature_1 > 0.903) then class: 0 (proba: 100.0%) | based on 3 samples
+
+if (feature_1 <= 0.633) and (feature_2 > 0.836) and (feature_2 <= 0.907) then class: 1 (proba: 100.0%) | based on 3 samples
+

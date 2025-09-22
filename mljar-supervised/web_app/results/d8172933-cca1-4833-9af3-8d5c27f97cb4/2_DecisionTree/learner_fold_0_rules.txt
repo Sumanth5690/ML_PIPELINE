@@ -1,0 +1,12 @@
+if (V16 <= 1.778) and (V25 <= 0.839) and (V18 > -0.568) then response: 2332.676 | based on 416 samples
+
+if (V16 <= 1.778) and (V25 <= 0.839) and (V18 <= -0.568) then response: 2743.776 | based on 153 samples
+
+if (V16 <= 1.778) and (V25 > 0.839) and (V22 <= -0.029) then response: 3172.523 | based on 78 samples
+
+if (V16 <= 1.778) and (V25 > 0.839) and (V22 > -0.029) then response: 2508.117 | based on 71 samples
+
+if (V16 > 1.778) and (V6 > -0.061) then response: 4058.092 | based on 16 samples
+
+if (V16 > 1.778) and (V6 <= -0.061) then response: 2763.977 | based on 16 samples
+

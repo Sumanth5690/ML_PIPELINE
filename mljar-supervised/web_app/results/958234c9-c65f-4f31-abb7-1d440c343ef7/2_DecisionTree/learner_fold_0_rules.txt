@@ -1,0 +1,8 @@
+if (Temperature > 0.5) and (PlayTennis <= 0.5) then class: 0 (proba: 58.82%) | based on 17 samples
+
+if (Temperature > 0.5) and (PlayTennis > 0.5) then class: 0 (proba: 66.67%) | based on 6 samples
+
+if (Temperature <= 0.5) and (PlayTennis <= 0.5) then class: 1 (proba: 100.0%) | based on 6 samples
+
+if (Temperature <= 0.5) and (PlayTennis > 0.5) then class: 0 (proba: 100.0%) | based on 1 samples
+

@@ -1,0 +1,215 @@
+{
+    "uid": "7cc78c2e-438d-4a93-990e-2573cfaf0164",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "crop": {
+                            "millet": 0,
+                            "rice": 1,
+                            "wheat": 2
+                        }
+                    },
+                    "columns": [
+                        "crop"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        20.86322629785613,
+                        11.145656732557306,
+                        10.69976564644707,
+                        0.5664534055173667,
+                        11.646709999049326,
+                        39.29803964760922,
+                        0.8123764863384191,
+                        398.91277321350447
+                    ],
+                    "mean": [
+                        68.02133333333333,
+                        31.344,
+                        32.68533333333333,
+                        6.519626666666666,
+                        69.83589333333333,
+                        151.28096,
+                        1.0066666666666666,
+                        2702.3173333333334
+                    ],
+                    "var": [
+                        435.2742115555556,
+                        124.225664,
+                        114.48498488888889,
+                        0.3208694606222222,
+                        135.64585380195555,
+                        1544.3359201450664,
+                        0.6599555555555556,
+                        159131.40063288886
+                    ],
+                    "n_samples_seen": 750,
+                    "n_features_in": 8,
+                    "columns": [
+                        "N",
+                        "P",
+                        "K",
+                        "pH",
+                        "humidity",
+                        "rainfall",
+                        "crop",
+                        "yield"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.6733519251265764
+                ],
+                "mean": [
+                    1.9883454786715065
+                ],
+                "var": [
+                    0.4534028150716665
+                ],
+                "n_samples_seen": 750,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    20.03
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "N": [
+                        "scale_normal"
+                    ],
+                    "P": [
+                        "scale_normal"
+                    ],
+                    "K": [
+                        "scale_normal"
+                    ],
+                    "pH": [
+                        "scale_normal"
+                    ],
+                    "humidity": [
+                        "scale_normal"
+                    ],
+                    "rainfall": [
+                        "scale_normal"
+                    ],
+                    "crop": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "yield": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "e536e2ca-a096-4fc9-95b4-694aee09de6e",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "N": [
+                    "scale_normal"
+                ],
+                "P": [
+                    "scale_normal"
+                ],
+                "K": [
+                    "scale_normal"
+                ],
+                "pH": [
+                    "scale_normal"
+                ],
+                "humidity": [
+                    "scale_normal"
+                ],
+                "rainfall": [
+                    "scale_normal"
+                ],
+                "crop": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "yield": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\0af380d3-c35e-4c38-8e5c-b7c91ee0b7bf\\X.data",
+            "y_path": "results\\0af380d3-c35e-4c38-8e5c-b7c91ee0b7bf\\y.data",
+            "results_path": "results\\0af380d3-c35e-4c38-8e5c-b7c91ee0b7bf"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "4.526769456046244",
+    "train_time": 2.5507442951202393,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

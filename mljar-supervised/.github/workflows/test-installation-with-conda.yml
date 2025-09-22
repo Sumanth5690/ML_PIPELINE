@@ -1,0 +1,33 @@
+name: Test installation with conda
+
+on: 
+  schedule:
+    - cron:  '0 8 * * 1'
+  # run workflow manually
+  workflow_dispatch:
+  
+jobs:
+  build:
+    name: Run (${{ matrix.python-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest] 
+        python-version: ['3.9']
+    
+    steps:
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: test
+          auto-update-conda: false
+          python-version: ${{ matrix.python-version }}
+      - name: Activate conda and check versions
+        run: |
+          conda activate test
+          conda --version
+          python --version
+      - name: Install MLJAR AutoML
+        run: conda install -c conda-forge mljar-supervised
+      - name: Try to import
+        run: python -c "import supervised;print(supervised.__version__)"

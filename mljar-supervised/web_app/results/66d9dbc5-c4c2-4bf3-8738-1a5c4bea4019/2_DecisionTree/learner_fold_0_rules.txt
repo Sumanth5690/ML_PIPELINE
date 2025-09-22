@@ -1,0 +1,4 @@
+if (Outlook <= 1.5) then class: Cold (proba: 83.33%) | based on 18 samples
+
+if (Outlook > 1.5) then class: Hot (proba: 100.0%) | based on 12 samples
+

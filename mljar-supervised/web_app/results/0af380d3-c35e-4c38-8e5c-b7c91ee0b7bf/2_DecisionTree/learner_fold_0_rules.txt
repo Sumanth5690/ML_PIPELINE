@@ -1,0 +1,14 @@
+if (humidity > 50.55) and (yield <= 3465.0) and (rainfall <= 218.93) then response: 27.686 | based on 721 samples
+
+if (humidity > 50.55) and (yield > 3465.0) and (N <= 100.0) then response: 31.22 | based on 11 samples
+
+if (humidity <= 50.55) and (K <= 44.0) and (rainfall > 120.625) then response: 31.319 | based on 8 samples
+
+if (humidity > 50.55) and (yield <= 3465.0) and (rainfall > 218.93) then response: 23.082 | based on 4 samples
+
+if (humidity <= 50.55) and (K <= 44.0) and (rainfall <= 120.625) then response: 33.528 | based on 4 samples
+
+if (humidity > 50.55) and (yield > 3465.0) and (N > 100.0) then response: 23.76 | based on 1 samples
+
+if (humidity <= 50.55) and (K > 44.0) then response: 21.15 | based on 1 samples
+

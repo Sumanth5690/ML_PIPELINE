@@ -1,0 +1,125 @@
+{
+    "uid": "0c913ca7-fa68-4d73-9b93-cf7c366944c9",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        49816.0569437121
+                    ],
+                    "mean": [
+                        86368.58266666667
+                    ],
+                    "var": [
+                        2481639529.4191666
+                    ],
+                    "n_samples_seen": 750,
+                    "n_features_in": 1,
+                    "columns": [
+                        "Time"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    1389.9936897499379
+                ],
+                "mean": [
+                    2566.50256
+                ],
+                "var": [
+                    1932082.4575446462
+                ],
+                "n_samples_seen": 750,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_normal"
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "Time": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "8fbb3281-762c-4faf-8333-8dde03b11cb2",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Time": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\67105e5a-44dd-4693-8f35-95fbf8d8a7ac\\X.data",
+            "y_path": "results\\67105e5a-44dd-4693-8f35-95fbf8d8a7ac\\y.data",
+            "results_path": "results\\67105e5a-44dd-4693-8f35-95fbf8d8a7ac"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "1513.1075268005986",
+    "train_time": 4.278299808502197,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

@@ -1,0 +1,36 @@
+{
+    "columns": [
+        "date",
+        "evictions",
+        "unemployment_rate",
+        "school_absenteeism",
+        "er_visits"
+    ],
+    "rows": 10000,
+    "cols": 5,
+    "target_is_numeric": true,
+    "columns_info": {
+        "date": [
+            "categorical",
+            "many_categories"
+        ],
+        "evictions": [
+            "scale"
+        ],
+        "unemployment_rate": [
+            "scale"
+        ],
+        "school_absenteeism": [
+            "scale"
+        ],
+        "er_visits": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "scale_log"
+    ],
+    "n_features": 5,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false
+}

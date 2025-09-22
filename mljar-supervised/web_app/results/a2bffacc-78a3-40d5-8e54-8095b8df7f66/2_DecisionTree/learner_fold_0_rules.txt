@@ -1,0 +1,16 @@
+if (temperature <= 38.85) and (temperature > 15.65) and (temperature <= 38.55) then response: 59.84 | based on 578 samples
+
+if (temperature > 38.85) and (latitude <= 26.88) and (wind_speed > 13.05) then response: 64.675 | based on 67 samples
+
+if (temperature > 38.85) and (latitude <= 26.88) and (wind_speed <= 13.05) then response: 73.086 | based on 49 samples
+
+if (temperature > 38.85) and (latitude > 26.88) and (temperature > 41.6) then response: 68.778 | based on 23 samples
+
+if (temperature <= 38.85) and (temperature <= 15.65) and (wind_speed > 10.0) then response: 54.545 | based on 11 samples
+
+if (temperature > 38.85) and (latitude > 26.88) and (temperature <= 41.6) then response: 41.51 | based on 10 samples
+
+if (temperature <= 38.85) and (temperature > 15.65) and (temperature > 38.55) then response: 38.6 | based on 6 samples
+
+if (temperature <= 38.85) and (temperature <= 15.65) and (wind_speed <= 10.0) then response: 26.683 | based on 6 samples
+

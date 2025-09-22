@@ -1,0 +1,122 @@
+{
+    "uid": "d4bf1d65-36d0-43a3-9830-42b810edd00a",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "city_size": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "01b2f592-ed17-4237-b4f1-77975d059b29",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "gini",
+                "max_depth": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "education": [
+                    "categorical_to_int"
+                ],
+                "city_size": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\f7f21c92-a694-43eb-ac33-166c2a932a43\\X.data",
+            "y_path": "results\\f7f21c92-a694-43eb-ac33-166c2a932a43\\y.data",
+            "results_path": "results\\f7f21c92-a694-43eb-ac33-166c2a932a43"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "gini",
+            "max_depth": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_DecisionTree\\learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "1.192092966562092e-07",
+    "train_time": 3.188210964202881,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.0
+}

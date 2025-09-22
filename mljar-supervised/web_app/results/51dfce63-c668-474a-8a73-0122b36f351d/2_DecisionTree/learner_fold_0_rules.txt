@@ -1,0 +1,16 @@
+if (er_visits > 85.5) and (er_visits <= 135.0) and (evictions > 18.0) then response: 6.935 | based on 51 samples
+
+if (er_visits > 85.5) and (er_visits > 135.0) and (er_visits > 138.5) then response: 7.4 | based on 10 samples
+
+if (er_visits > 85.5) and (er_visits <= 135.0) and (evictions <= 18.0) then response: 5.504 | based on 5 samples
+
+if (er_visits > 85.5) and (er_visits > 135.0) and (er_visits <= 138.5) then response: 9.111 | based on 4 samples
+
+if (er_visits <= 85.5) and (poverty_rate <= 8.124) and (school_absenteeism <= 18.424) then response: 4.537 | based on 2 samples
+
+if (er_visits <= 85.5) and (poverty_rate > 8.124) and (poverty_rate > 8.696) then response: 5.254 | based on 1 samples
+
+if (er_visits <= 85.5) and (poverty_rate > 8.124) and (poverty_rate <= 8.696) then response: 5.734 | based on 1 samples
+
+if (er_visits <= 85.5) and (poverty_rate <= 8.124) and (school_absenteeism > 18.424) then response: 4.665 | based on 1 samples
+

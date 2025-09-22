@@ -1,0 +1,16 @@
+if (humidity > 41.8) and (wind_speed <= 20.45) and (longitude > 72.725) then response: 29.592 | based on 402 samples
+
+if (humidity > 41.8) and (wind_speed > 20.45) and (wind_speed <= 24.35) then response: 33.351 | based on 80 samples
+
+if (humidity <= 41.8) and (wind_speed <= 13.0) and (wind_speed <= 9.5) then response: 26.769 | based on 75 samples
+
+if (humidity <= 41.8) and (wind_speed > 13.0) and (wind_speed > 18.4) then response: 28.608 | based on 66 samples
+
+if (humidity <= 41.8) and (wind_speed > 13.0) and (wind_speed <= 18.4) then response: 31.238 | based on 47 samples
+
+if (humidity > 41.8) and (wind_speed <= 20.45) and (longitude <= 72.725) then response: 32.895 | based on 38 samples
+
+if (humidity <= 41.8) and (wind_speed <= 13.0) and (wind_speed > 9.5) then response: 21.74 | based on 25 samples
+
+if (humidity > 41.8) and (wind_speed > 20.45) and (wind_speed > 24.35) then response: 28.412 | based on 17 samples
+

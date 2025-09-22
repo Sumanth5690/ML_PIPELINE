@@ -1,0 +1,55 @@
+name,model_type,metric_type,metric_value,train_time,single_prediction_time
+1_Linear,Linear,rmse,56630.884643136895,7.08,0.1054
+2_Default_LightGBM,LightGBM,rmse,55893.59517909441,8.62,0.1099
+3_Default_Xgboost,Xgboost,rmse,55685.81078587079,8.77,0.0997
+4_Default_CatBoost,CatBoost,rmse,55122.554670189136,13.42,0.0586
+5_Default_NeuralNetwork,Neural Network,rmse,53763.35219963798,7.35,0.1387
+6_Default_RandomForest,Random Forest,rmse,55622.891838828065,32.91,0.2089
+11_LightGBM,LightGBM,rmse,55819.737143047394,7.77,0.0829
+7_Xgboost,Xgboost,rmse,55825.220530002975,10.57,0.0777
+15_CatBoost,CatBoost,rmse,55355.050774193354,33.48,0.146
+19_RandomForest,Random Forest,rmse,55430.53160118926,29.77,0.5207
+23_NeuralNetwork,Neural Network,rmse,57657.16390996092,5.44,0.1872
+12_LightGBM,LightGBM,rmse,56216.085908979716,5.48,0.1318
+8_Xgboost,Xgboost,rmse,55625.49618986318,13.0,0.1105
+16_CatBoost,CatBoost,rmse,52570.68476331039,20.91,0.0561
+20_RandomForest,Random Forest,rmse,55612.289020446886,24.84,0.3144
+24_NeuralNetwork,Neural Network,rmse,58441.091732126224,8.0,0.1029
+13_LightGBM,LightGBM,rmse,55808.239651691845,6.71,0.0968
+9_Xgboost,Xgboost,rmse,55619.61390599535,8.16,0.097
+17_CatBoost,CatBoost,rmse,55284.13647527709,17.77,0.1609
+21_RandomForest,Random Forest,rmse,55694.001850883076,28.81,0.2047
+25_NeuralNetwork,Neural Network,rmse,58804.257693974,4.41,0.0859
+14_LightGBM,LightGBM,rmse,55915.55558354821,5.16,0.0633
+10_Xgboost,Xgboost,rmse,55117.026528589646,4.76,0.0716
+18_CatBoost,CatBoost,rmse,52235.81669653166,13.56,0.072
+22_RandomForest,Random Forest,rmse,55789.3464756041,17.42,0.1571
+26_NeuralNetwork,Neural Network,rmse,58576.494253068144,4.07,0.0888
+18_CatBoost_GoldenFeatures,CatBoost,rmse,54269.543286692926,19.44,0.1172
+16_CatBoost_GoldenFeatures,CatBoost,rmse,51837.66275332621,30.35,0.2875
+5_Default_NeuralNetwork_GoldenFeatures,Neural Network,rmse,55443.50284807981,11.69,0.5319
+16_CatBoost_GoldenFeatures_RandomFeature,CatBoost,rmse,52493.78047889922,30.45,0.1583
+16_CatBoost_GoldenFeatures_SelectedFeatures,CatBoost,rmse,51656.958781077024,5.75,0.0549
+5_Default_NeuralNetwork_SelectedFeatures,Neural Network,rmse,55657.43021492683,4.01,0.0658
+10_Xgboost_SelectedFeatures,Xgboost,rmse,55621.373213387276,4.78,0.0432
+19_RandomForest_SelectedFeatures,Random Forest,rmse,55373.99200378934,8.9,0.177
+13_LightGBM_SelectedFeatures,LightGBM,rmse,55715.89600176226,4.46,0.0375
+27_CatBoost_GoldenFeatures_SelectedFeatures,CatBoost,rmse,51052.5864208366,4.94,0.0516
+28_CatBoost_GoldenFeatures_SelectedFeatures,CatBoost,rmse,51993.16046506128,6.83,0.0691
+29_CatBoost_GoldenFeatures,CatBoost,rmse,51297.90358178904,13.68,0.148
+30_CatBoost_GoldenFeatures,CatBoost,rmse,52791.8051986022,42.54,0.0978
+31_NeuralNetwork,Neural Network,rmse,56987.618873548345,4.67,0.0521
+32_Xgboost,Xgboost,rmse,55388.80837222452,4.87,0.051
+33_RandomForest_SelectedFeatures,Random Forest,rmse,55373.99200378934,8.45,0.1562
+34_RandomForest,Random Forest,rmse,55370.09723152634,57.48,0.4147
+35_NeuralNetwork_GoldenFeatures,Neural Network,rmse,54367.82899597117,31.38,1.1378
+36_NeuralNetwork_GoldenFeatures,Neural Network,rmse,58263.46341597455,35.21,1.1813
+37_Xgboost,Xgboost,rmse,55637.10416812034,49.6,0.2829
+38_Xgboost,Xgboost,rmse,55779.79982933474,49.99,1.3651
+39_LightGBM_SelectedFeatures,LightGBM,rmse,55680.36061031041,33.39,0.0895
+40_LightGBM_SelectedFeatures,LightGBM,rmse,55715.89600176226,28.16,0.1164
+41_LightGBM,LightGBM,rmse,55810.20245072102,45.83,0.2785
+42_LightGBM,LightGBM,rmse,55808.239651691845,48.62,0.25
+43_CatBoost_GoldenFeatures_SelectedFeatures,CatBoost,rmse,55500.229844243855,20.76,1.5317
+44_CatBoost_GoldenFeatures_SelectedFeatures,CatBoost,rmse,51578.71110291385,29.83,0.1722
+45_CatBoost_GoldenFeatures,CatBoost,rmse,54936.886991735046,43.53,1.142

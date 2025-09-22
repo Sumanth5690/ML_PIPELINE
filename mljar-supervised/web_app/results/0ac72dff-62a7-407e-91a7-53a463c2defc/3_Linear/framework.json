@@ -1,0 +1,158 @@
+{
+    "uid": "6d08d9a2-d208-4624-b342-ac088ed5f695",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        24.155979328798352,
+                        7.239177848961088,
+                        5.2981523604107705,
+                        4.506561727970006
+                    ],
+                    "mean": [
+                        60.654,
+                        12.720266666666667,
+                        20.572877333333334,
+                        77.84450600000001
+                    ],
+                    "var": [
+                        583.5113373333334,
+                        52.40569592888889,
+                        28.07041843412622,
+                        20.309098608004003
+                    ],
+                    "n_samples_seen": 750,
+                    "n_features_in": 4,
+                    "columns": [
+                        "humidity",
+                        "wind_speed",
+                        "latitude",
+                        "longitude"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.7739370464246329
+                ],
+                "mean": [
+                    2.518493966548832
+                ],
+                "var": [
+                    0.5989785518284844
+                ],
+                "n_samples_seen": 750,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    15.0
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "humidity": [
+                        "scale_normal"
+                    ],
+                    "wind_speed": [
+                        "scale_normal"
+                    ],
+                    "latitude": [
+                        "scale_normal"
+                    ],
+                    "longitude": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "7edb2564-4d4d-4c14-95cb-bc8f9f61d4bd",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "humidity": [
+                    "scale_normal"
+                ],
+                "wind_speed": [
+                    "scale_normal"
+                ],
+                "latitude": [
+                    "scale_normal"
+                ],
+                "longitude": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "results\\0ac72dff-62a7-407e-91a7-53a463c2defc\\X.data",
+            "y_path": "results\\0ac72dff-62a7-407e-91a7-53a463c2defc\\y.data",
+            "results_path": "results\\0ac72dff-62a7-407e-91a7-53a463c2defc"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": "8.743834907183388",
+    "train_time": 1.2329964637756348,
+    "is_stacked": false,
+    "joblib_version": "1.5.2"
+}

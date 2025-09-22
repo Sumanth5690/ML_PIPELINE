@@ -1,0 +1,16 @@
+if (temperature <= 39.05) and (longitude > 72.725) and (temperature > 16.95) then response: 12.747 | based on 512 samples
+
+if (temperature > 39.05) and (temperature > 39.35) and (longitude > 73.367) then response: 14.365 | based on 100 samples
+
+if (temperature <= 39.05) and (longitude > 72.725) and (temperature <= 16.95) then response: 10.657 | based on 46 samples
+
+if (temperature <= 39.05) and (longitude <= 72.725) and (temperature > 18.15) then response: 9.442 | based on 43 samples
+
+if (temperature > 39.05) and (temperature > 39.35) and (longitude <= 73.367) then response: 12.0 | based on 35 samples
+
+if (temperature > 39.05) and (temperature <= 39.35) and (humidity > 47.95) then response: 16.817 | based on 6 samples
+
+if (temperature > 39.05) and (temperature <= 39.35) and (humidity <= 47.95) then response: 21.24 | based on 5 samples
+
+if (temperature <= 39.05) and (longitude <= 72.725) and (temperature <= 18.15) then response: 17.9 | based on 3 samples
+

@@ -1,0 +1,5 @@
+feature,mean_importance
+random_feature,-0.002821766268616721
+Outlook,0.005000323145778829
+Temperature,0.00525000878740105
+PlayTennis,0.015490526597593157

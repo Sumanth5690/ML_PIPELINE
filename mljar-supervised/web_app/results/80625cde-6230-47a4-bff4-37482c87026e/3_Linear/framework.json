@@ -1,0 +1,203 @@
+{
+    "uid": "0586274a-0d0f-4f51-a523-966ebc18670f",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "education": {
+                            "Bachelor": 0,
+                            "High School": 1,
+                            "Master": 2
+                        },
+                        "city_size": {
+                            "Large": 0,
+                            "Medium": 1,
+                            "Small": 2
+                        }
+                    },
+                    "columns": [
+                        "education",
+                        "city_size"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        8.452744458984247,
+                        15059.17955563612,
+                        0.7520342781785652,
+                        7.055415571664712,
+                        0.8459051693633013,
+                        77.26505606604378,
+                        0.9893881386437221,
+                        0.49888765156985887
+                    ],
+                    "mean": [
+                        32.53333333333333,
+                        47233.333333333336,
+                        0.9666666666666667,
+                        8.566666666666666,
+                        1.1333333333333333,
+                        710.3333333333334,
+                        1.2333333333333334,
+                        0.5333333333333333
+                    ],
+                    "var": [
+                        71.44888888888889,
+                        226778888.8888889,
+                        0.5655555555555555,
+                        49.77888888888889,
+                        0.7155555555555555,
+                        5969.88888888889,
+                        0.978888888888889,
+                        0.2488888888888889
+                    ],
+                    "n_samples_seen": 30,
+                    "n_features_in": 8,
+                    "columns": [
+                        "age",
+                        "income",
+                        "education",
+                        "work_experience",
+                        "city_size",
+                        "credit_score",
+                        "dependents",
+                        "homeowner"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "income": [
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "work_experience": [
+                        "scale_normal"
+                    ],
+                    "city_size": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "credit_score": [
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "homeowner": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.7.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "2cf6d74c-09a7-452d-aac9-532d90913311",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "age": [
+                    "scale_normal"
+                ],
+                "income": [
+                    "scale_normal"
+                ],
+                "education": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "work_experience": [
+                    "scale_normal"
+                ],
+                "city_size": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "credit_score": [
+                    "scale_normal"
+                ],
+                "dependents": [
+                    "scale_normal"
+                ],
+                "homeowner": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "results\\80625cde-6230-47a4-bff4-37482c87026e\\X.data",
+            "y_path": "results\\80625cde-6230-47a4-bff4-37482c87026e\\y.data",
+            "results_path": "results\\80625cde-6230-47a4-bff4-37482c87026e"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.11073263043880717",
+    "train_time": 3.403409481048584,
+    "is_stacked": false,
+    "joblib_version": "1.5.2",
+    "threshold": 0.4151435521262128
+}

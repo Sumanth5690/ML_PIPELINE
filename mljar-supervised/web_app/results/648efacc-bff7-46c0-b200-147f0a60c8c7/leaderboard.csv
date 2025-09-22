@@ -1,0 +1,9 @@
+name,model_type,metric_type,metric_value,train_time,single_prediction_time
+1_Linear,Linear,logloss,0.10998656749478819,20.88,0.1166
+2_Default_LightGBM,LightGBM,logloss,0.1297127450758428,7.82,0.0341
+3_Default_Xgboost,Xgboost,logloss,0.12915965531994403,5.79,0.0559
+4_Default_CatBoost,CatBoost,logloss,0.013373551645965143,157.93,0.0332
+5_Default_NeuralNetwork,Neural Network,logloss,0.31023413900957997,19.04,0.3801
+6_Default_RandomForest,Random Forest,logloss,0.6931471805599453,25.47,0.2765
+11_LightGBM,LightGBM,logloss,0.6931471805599453,11.06,0.0689
+7_Xgboost,Xgboost,logloss,0.6931471805599453,4.8,0.0378

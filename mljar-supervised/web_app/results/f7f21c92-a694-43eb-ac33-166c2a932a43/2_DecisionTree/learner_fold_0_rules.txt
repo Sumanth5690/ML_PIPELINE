@@ -1,0 +1,4 @@
+if (credit_score > 695.0) then class: 1 (proba: 100.0%) | based on 15 samples
+
+if (credit_score <= 695.0) then class: 0 (proba: 100.0%) | based on 15 samples
+
