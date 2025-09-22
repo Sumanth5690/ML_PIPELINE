@@ -1,0 +1,26 @@
+age,income,education,work_experience,city_size,credit_score,dependents,homeowner,loan_approved
+25,35000,High School,2,Small,650,0,0,0
+30,45000,Bachelor,5,Medium,720,1,1,1
+35,55000,Master,8,Large,780,2,1,1
+28,40000,High School,4,Small,680,1,0,0
+42,65000,Bachelor,15,Large,750,3,1,1
+22,28000,High School,1,Small,600,0,0,0
+38,58000,Master,12,Medium,800,2,1,1
+45,70000,Bachelor,20,Large,820,1,1,1
+26,32000,High School,3,Small,640,1,0,0
+33,48000,Bachelor,7,Medium,710,2,0,1
+50,75000,Master,25,Large,850,3,1,1
+29,42000,Bachelor,6,Medium,690,1,1,0
+36,52000,Master,10,Large,760,2,1,1
+24,30000,High School,2,Small,620,0,0,0
+41,62000,Bachelor,16,Medium,770,2,1,1
+27,38000,High School,4,Small,660,1,0,0
+39,59000,Master,13,Large,790,2,1,1
+31,46000,Bachelor,8,Medium,700,1,0,1
+44,68000,Master,18,Large,810,3,1,1
+23,29000,High School,1,Small,610,0,0,0
+37,56000,Bachelor,11,Medium,740,2,1,1
+48,72000,Master,22,Large,830,2,1,1
+32,49000,Bachelor,9,Medium,720,1,1,1
+26,36000,High School,3,Small,650,1,0,0
+43,66000,Master,17,Large,800,3,1,1

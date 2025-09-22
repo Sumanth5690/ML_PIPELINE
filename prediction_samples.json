@@ -1,0 +1,32 @@
+[
+  {
+    "age": 28,
+    "income": 55000,
+    "education": "Bachelor",
+    "work_experience": 6,
+    "city_size": "Medium",
+    "credit_score": 720,
+    "dependents": 1,
+    "homeowner": 1
+  },
+  {
+    "age": 35,
+    "income": 42000,
+    "education": "High School",
+    "work_experience": 12,
+    "city_size": "Small",
+    "credit_score": 680,
+    "dependents": 2,
+    "homeowner": 0
+  },
+  {
+    "age": 42,
+    "income": 78000,
+    "education": "Master",
+    "work_experience": 18,
+    "city_size": "Large",
+    "credit_score": 800,
+    "dependents": 3,
+    "homeowner": 1
+  }
+]

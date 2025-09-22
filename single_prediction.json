@@ -1,0 +1,12 @@
+[
+  {
+    "age": 30,
+    "income": 50000,
+    "education": "Bachelor",
+    "work_experience": 7,
+    "city_size": "Medium",
+    "credit_score": 750,
+    "dependents": 1,
+    "homeowner": 1
+  }
+]
